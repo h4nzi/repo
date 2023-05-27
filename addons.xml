@@ -52,10 +52,27 @@
   </extension>
 </addon>
 
+<addon id="service.holidays" name="Holidays" version="1.0.3" provider-name="jkmh">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+	<!-- <import addon="xbmc.addon" version="14.0.0"/> -->
+	<import addon="script.module.requests" version="2.22.0+matrix.1"/>
+  </requires>
+  <extension point="xbmc.service" library="holidays.py"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="cs_CZ"></summary>
+    <description lang="cs_CZ">Informace o jmeninách, státních svátcích a otevírací době obchodů o státních svátcích v ČR. K zobrazení je nutná editace skinu. Díky @JiRo za námět</description>
+    <license>GPL-3.0-only</license>
+    <platform>all</platform>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
 <addon id="service.netspeed.monitor" name="Netspeed Monitor" version="1.0.4" provider-name="jkmh">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
-	<import addon="xbmc.addon" version="14.0.0"/>
   </requires>
   <extension point="xbmc.service" library="netspeed.py"/>
   <extension point="xbmc.addon.metadata">
@@ -64,6 +81,22 @@
     <description lang="cs_CZ">Addon k zobrazení datového toku rozhraním eth0/wlan0 pro skin Confluence SCC. Po nainstalování se automaticky rozšíří možnosti nastavení. K zobrazení informací v jiných skinech je nutná jejich dodatečná editace.</description>
     <license>GPL-3.0-only</license>
     <platform>linux</platform>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="service.ping.monitor" name="Ping Monitor" version="1.0.2" provider-name="jkmh">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.service" language="en" library="ping.py"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="cs_CZ">Monitoring dostupnosti sítě a internetu</summary>
+    <description lang="cs_CZ">Monitoring dostupnosti sítě a internetu pomocí příkazu ping. K zobrazení je nutná editace skinu.</description>
+    <license>GPL-3.0-only</license>
+    <platform>all</platform>
     <assets>
       <icon>icon.png</icon>
     </assets>
