@@ -35,7 +35,7 @@
 	</extension>
 </addon>
 
-<addon id="service.birthdays.reminder" name="Narozeniny" version="1.2.1" provider-name="jkmh">
+<addon id="service.birthdays.reminder" name="Narozeniny" version="1.1.1" provider-name="jkmh">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
   </requires>
