@@ -8,8 +8,8 @@
   <extension point="xbmc.service" library="holidays.py"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="cs_CZ"></summary>
-    <description lang="cs_CZ">Informace o jmeninách, státních svátcích a otevírací době obchodů o státních svátcích v ČR. K zobrazení je nutná editace skinu. Díky @JiRo za námět</description>
-    <license>GPL-3.0-only</license>
+    <description lang="cs_CZ">Informace o jmeninách, státních svátcích na domácí obrazovce.[CR][CR]Doplněk pro skin Confluence SCC. Po instalaci se rozšíří možnosti v nastavení skinu. U ostatních skinů je nutná jejich dodatečná editace.[CR][CR]Díky @JiRo za námět</description>
+    <license>GPL 2.0</license>
     <platform>all</platform>
     <assets>
       <icon>icon.png</icon>

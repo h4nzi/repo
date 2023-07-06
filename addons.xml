@@ -1,40 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon
-	id="repo.h4nzi" name="JKMH addons" version="1.0.1" provider-name="jkmh">
-	<extension point="xbmc.addon.repository" name="repo h4nzi">
-		<dir>
-			<info compressed="false">https://raw.githubusercontent.com/h4nzi/repo/addons/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/h4nzi/repo/addons/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/h4nzi/repo/addons/</datadir>
-		</dir>
-		<dir minversion="20.0.0" maxversion="21.9.0">
-			<info compressed="false">https://raw.githubusercontent.com/h4nzi/repo/nexus/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/h4nzi/repo/nexus/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/h4nzi/repo/nexus/</datadir>
-		</dir>
-		<dir minversion="19.0.0" maxversion="19.9.0">
-			<info compressed="false">https://raw.githubusercontent.com/h4nzi/repo/matrix/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/h4nzi/repo/matrix/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/h4nzi/repo/matrix/</datadir>
-		</dir>
-		<dir minversion="18.0.0" maxversion="18.9.0">
-			<info compressed="false">https://raw.githubusercontent.com/h4nzi/repo/leia/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/h4nzi/repo/leia/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/h4nzi/repo/leia/</datadir>
-		</dir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>Moje repo</summary>
-		<description>Download and install addons by jkmh.</description>
-		<platform>all</platform>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-		</assets>
-	</extension>
-</addon>
-
 <addon id="service.birthdays.reminder" name="Narozeniny" version="1.1.1" provider-name="jkmh">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -61,8 +26,8 @@
   <extension point="xbmc.service" library="holidays.py"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="cs_CZ"></summary>
-    <description lang="cs_CZ">Informace o jmeninách, státních svátcích a otevírací době obchodů o státních svátcích v ČR. K zobrazení je nutná editace skinu. Díky @JiRo za námět</description>
-    <license>GPL-3.0-only</license>
+    <description lang="cs_CZ">Informace o jmeninách, státních svátcích na domácí obrazovce.[CR][CR]Doplněk pro skin Confluence SCC. Po instalaci se rozšíří možnosti v nastavení skinu. U ostatních skinů je nutná jejich dodatečná editace.[CR][CR]Díky @JiRo za námět</description>
+    <license>GPL 2.0</license>
     <platform>all</platform>
     <assets>
       <icon>icon.png</icon>
@@ -73,6 +38,7 @@
 <addon id="service.netspeed.monitor" name="Netspeed Monitor" version="1.0.4" provider-name="jkmh">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
+	<import addon="xbmc.addon" version="14.0.0"/>
   </requires>
   <extension point="xbmc.service" library="netspeed.py"/>
   <extension point="xbmc.addon.metadata">
@@ -80,22 +46,22 @@
     <description lang="en_GB">Netspeed monitor for eth0/wlan0 interface</description>
     <description lang="cs_CZ">Addon k zobrazení datového toku rozhraním eth0/wlan0 pro skin Confluence SCC. Po nainstalování se automaticky rozšíří možnosti nastavení. K zobrazení informací v jiných skinech je nutná jejich dodatečná editace.</description>
     <license>GPL-3.0-only</license>
-    <platform>linux</platform>
+    <platform>all</platform>
     <assets>
       <icon>icon.png</icon>
     </assets>
   </extension>
 </addon>
 
-<addon id="service.ping.monitor" name="Ping Monitor" version="1.0.2" provider-name="jkmh">
+<addon id="service.ping.monitor" name="Ping Monitor" version="1.1.7" provider-name="jkmh">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
   </requires>
-  <extension point="xbmc.service" language="en" library="ping.py"/>
+  <extension point="xbmc.service" library="ping.py"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="cs_CZ">Monitoring dostupnosti sítě a internetu</summary>
-    <description lang="cs_CZ">Monitoring dostupnosti sítě a internetu pomocí příkazu ping. K zobrazení je nutná editace skinu.</description>
-    <license>GPL-3.0-only</license>
+    <description lang="cs_CZ">Kontinuální zjišťování dostupnosti internetu ikonami na hlavní obrazovce.[CR][CR]Doplněk pro skin Confluence SCC. Po instalaci se rozšíří možnosti v nastavení skinu. U ostatních skinů je nutná jejich dodatečná editace.</description>
+    <license>GPL 2.0</license>
     <platform>all</platform>
     <assets>
       <icon>icon.png</icon>
