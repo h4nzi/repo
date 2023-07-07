@@ -1,3 +1,12 @@
+[B]4.7.15.nexus-9[/B]
+- oprava zobrazení v nastavení skinu a infoboxu pro Android
+
+[B]4.7.15.nexus-8[/B]
+- oprava písma v narozeninách
+
+[B]4.7.15.nexus-8[/B]
+- oprava písma v narozeninách
+
 [B]4.7.15.nexus-7[/B]
 - přidáno rozšířené hodnocení
 
