@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="script.advancedsettings.generator" name="Advanced Settings Generator" version="1.2.0" provider-name="jkmh">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="xbmc.addon" version="14.0.0"/>
+	</requires>
+	<extension point="xbmc.python.script" library="default.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="cs_CZ">Výpočet a uložení souboru advancedsettings.xml</summary>
+		<description lang="cs_CZ">Addon automaticky zjistí volnou paměť RAM. Podle doporučeného vzorce vypočítá a nakonfiguruje velikost cache v souboru advancedsettings.xml.[CR][CR]Bližší informace na https://repo.richardpodzemsky.cz/cache a https://kodi.wiki/view/Advancedsettings.xml</description>
+		<platform>all</platform>
+		<license>GPL 2.0</license>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="script.skip.ads" name="Skip Ads" version="1.0.0" provider-name="jkmh">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+	<import addon="xbmc.addon" version="14.0.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="main.py"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB"></summary>
+    <description lang="en_GB"></description>
+    <description lang="cs_CZ">Přeskočení reklamy v TV vysílání</description>
+    <license>GPL-3.0-only</license>
+    <platform>all</platform>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.tools.box" name="Kodi Tools Box" version="1.1.2" provider-name="jkmh">
+	<requires>
+		<!-- <import addon="xbmc.python" version="3.0.0"/> -->
+		<import addon="virtual.network-tools" version="9.2.104"/>
+	</requires>
+	<extension point="xbmc.python.script" library="default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="cs_CZ">Zjednodušení práce v Kodi</summary>
+		<description lang="cs_CZ">Sbírka různých nástrojů , které se mohou hodit.[CR][CR] - Advanced settings - nastavení videocache jedním kliknutím[CR] - Záloha/Obnovení nastavení SCC (settings.xml) jedním kliknutím[CR] - Čistící nástroje</description>
+		<platform>android linux windows</platform>
+        <license>GPL-2.0-or-later</license>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="script.useragent" name="User Agent" version="0.1.0" provider-name="JiRo">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+	</requires>
+	<extension point="xbmc.python.script" library="script.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="cs_CZ">Script User Agentz Kodi</summary>
+		<description lang="cs_CZ">Script po svém spuštění vypíše do logu řetezec User Agent (UA) instalovaného Kodi</description>
+        <language>cs</language>
+		<platform>all</platform>
+        <license>GPL 2.0</license>
+		<forum></forum>
+		<website></website>
+		<email></email>
+		<source></source>
+		<assets>
+			<icon></icon>
+		</assets>
+		<news>
+2023-05-26 [0.1.0]
+- initial version
+		</news>
+	</extension>
+</addon>
+
+<addon id="service.birthdays.reminder" name="Narozeniny" version="1.1.1" provider-name="jkmh">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="reminder.py"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB"></summary>
+    <description lang="en_GB">Kodi Birthday Reminder</description>
+    <description lang="cs_CZ">Připomene narozeniny vašich blízkých. Určeno pro skin Confluence SCC.Pro jiné skiny nutný zásah do skinu.[CR][CR]Vytvořte textový soubor. Na každý řádek vložte jeden záznam ve formátu ddmm jméno. V nastavení addonu zadejte názex souboru, nastavte cestu k tomuto souboru a restartujte Kodi </description>
+    <license>GPL-3.0-only</license>
+    <platform>all</platform>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="service.holidays" name="Holidays" version="1.0.3" provider-name="jkmh">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+	<!-- <import addon="xbmc.addon" version="14.0.0"/> -->
+	<import addon="script.module.requests" version="2.22.0+matrix.1"/>
+  </requires>
+  <extension point="xbmc.service" library="holidays.py"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="cs_CZ"></summary>
+    <description lang="cs_CZ">Informace o jmeninách, státních svátcích na domácí obrazovce.[CR][CR]Doplněk pro skin Confluence SCC. Po instalaci se rozšíří možnosti v nastavení skinu. U ostatních skinů je nutná jejich dodatečná editace.[CR][CR]Díky @JiRo za námět</description>
+    <license>GPL 2.0</license>
+    <platform>all</platform>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="service.netspeed.monitor" name="Netspeed Monitor" version="1.0.4" provider-name="jkmh">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+	<import addon="xbmc.addon" version="14.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="netspeed.py"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Netspeed monitor for eth0/wlan0 interface</summary>
+    <description lang="en_GB">Netspeed monitor for eth0/wlan0 interface</description>
+    <description lang="cs_CZ">Addon k zobrazení datového toku rozhraním eth0/wlan0 pro skin Confluence SCC. Po nainstalování se automaticky rozšíří možnosti nastavení. K zobrazení informací v jiných skinech je nutná jejich dodatečná editace.</description>
+    <license>GPL-3.0-only</license>
+    <platform>all</platform>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="service.ping.monitor" name="Ping Monitor" version="1.1.8" provider-name="jkmh">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="ping.py"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="cs_CZ">Monitoring dostupnosti sítě a internetu</summary>
+    <description lang="cs_CZ">Kontinuální zjišťování dostupnosti internetu ikonami na hlavní obrazovce.[CR][CR]Doplněk pro skin Confluence SCC. Po instalaci se rozšíří možnosti v nastavení skinu. U ostatních skinů je nutná jejich dodatečná editace.</description>
+    <license>GPL 2.0</license>
+    <platform>all</platform>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+</addons>
