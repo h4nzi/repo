@@ -1,3 +1,6 @@
+[B]4.7.15.nexus-10[/B]
+- přesun informace o nahrávání
+
 [B]4.7.15.nexus-9[/B]
 - oprava zobrazení v nastavení skinu a infoboxu pro Android
 - oprava posouvání v Nastavení skinu/Úvodní obrazovka
