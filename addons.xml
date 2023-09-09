@@ -147,7 +147,7 @@
 	</extension>
 </addon>
 
-<addon id="skin.confluence.master" version="4.7.15.master-11" name="Confluence SCC Master" provider-name="Jezz_X, Team Kodi, jkmh">
+<addon id="skin.confluence.master" version="4.7.15.master-11a" name="Confluence SCC Master" provider-name="Jezz_X, Team Kodi, jkmh">
 	<requires>
 		<import addon="xbmc.gui" version="5.16.0"/>
 	</requires>

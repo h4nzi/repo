@@ -1,5 +1,8 @@
-[B]4.7.15.nexus-11[/B]
+[B]4.7.15.nexus-11a[/B]
+- přesouvání ikony nahrávání na úvodní obrazovce
 - uživatelská změna pořadí v hlavní nabídce
+- oprava středění a pozice zástupců videodoplňků (Home + Includes)
+- upravena pozice informace o TV nahrávání.
 
 [B]4.7.15.nexus-10[/B]
 - oprava posouvání v Nastavení skinu/Úvodní obrazovka
@@ -24,6 +27,7 @@
 
 [B]4.7.15.master-4[/B]
 - drobné úpravy
+- zvýšen počet zástupců videoaddonů na 7
 
 [B]4.7.15.master-3[/B]
 - optimalizace

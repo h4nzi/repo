@@ -1,5 +1,7 @@
-[B]4.7.15.nexus-10[/B]
+[B]4.7.15.nexus-10a[/B]
 - přesun informace o nahrávání
+- oprava středění zástupců videodoplňků
+- volitelné barvy žánrů v EPG - dodělat, barvy se nepřeklápí
 
 [B]4.7.15.nexus-9[/B]
 - oprava zobrazení v nastavení skinu a infoboxu pro Android
@@ -25,6 +27,7 @@
 
 [B]4.7.15.nexus-4[/B]
 - drobné úpravy
+- zvýšen počet zástupců videoaddonů na 7
 
 [B]4.7.15.nexus-3[/B]
 - optimalizace
