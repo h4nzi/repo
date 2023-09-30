@@ -1,14 +1,11 @@
-[B]4.7.15.nexus-10[/B]
+[B]4.7.15.nexus-10a[/B]
 - přesun informace o nahrávání
 - oprava středění zástupců videodoplňků
-- volitelné barvy žánrů v EPG
+- volba barevných žánrů v EPG 
 
 [B]4.7.15.nexus-9[/B]
 - oprava zobrazení v nastavení skinu a infoboxu pro Android
 - oprava posouvání v Nastavení skinu/Úvodní obrazovka
-
-[B]4.7.15.nexus-8[/B]
-- oprava písma v narozeninách
 
 [B]4.7.15.nexus-8[/B]
 - oprava písma v narozeninách
