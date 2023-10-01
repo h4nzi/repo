@@ -1,7 +1,8 @@
-[B]4.7.15.nexus-10a[/B]
+[B]4.7.15.nexus-10[/B]
 - přesun informace o nahrávání
 - oprava středění zástupců videodoplňků
-- volba barevných žánrů v EPG 
+- volba barevných žánrů v EPG
+- v SCC doplněna volba filtrů 
 
 [B]4.7.15.nexus-9[/B]
 - oprava zobrazení v nastavení skinu a infoboxu pro Android
