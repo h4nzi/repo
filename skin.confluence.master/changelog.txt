@@ -1,3 +1,10 @@
+[B]4.7.15.nexus-12[/B]
+- přidaná kontrola status SCC do Infoboxu a Nastavení skinu
+- odebráno volání script.vip v submenu
+- úpravy v mod_calendar.xml
+- zobrazit FPS
+
+
 [B]4.7.15.nexus-11[/B]
 - přesouvání ikony nahrávání na úvodní obrazovce
 - uživatelská změna pořadí v hlavní nabídce

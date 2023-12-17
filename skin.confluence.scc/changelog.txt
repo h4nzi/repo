@@ -1,3 +1,8 @@
+[B]4.7.15.nexus-12[/B]
+- přidaná kontrola dostupnosi SCC do Infoboxu a Nastavení skinu
+- úpravy v mod_calendar.xml
+- zobrazit FPS
+
 [B]4.7.15.nexus-10[/B]
 - přesun informace o nahrávání
 - oprava středění zástupců videodoplňků
