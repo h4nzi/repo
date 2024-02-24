@@ -13,7 +13,12 @@
 			<checksum>https://raw.githubusercontent.com/h4nzi/repo/addons/addons.xml.md5</checksum>
 			<datadir zip="true">https://raw.githubusercontent.com/h4nzi/repo/addons/</datadir>
 		</dir>
-		<dir minversion="20.0.0" maxversion="21.9.0">
+		<dir minversion="21.0.0" maxversion="21.9.9">
+			<info compressed="false">https://raw.githubusercontent.com/h4nzi/repo/omega/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/h4nzi/repo/omega/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/h4nzi/repo/omega/</datadir>
+		</dir>
+		<dir minversion="20.0.0" maxversion="20.9.9">
 			<info compressed="false">https://raw.githubusercontent.com/h4nzi/repo/nexus/addons.xml</info>
 			<checksum>https://raw.githubusercontent.com/h4nzi/repo/nexus/addons.xml.md5</checksum>
 			<datadir zip="true">https://raw.githubusercontent.com/h4nzi/repo/nexus/</datadir>
