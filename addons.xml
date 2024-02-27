@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
 <addon
-	id="repository.h4nzi" name="JKMH Repository" version="1.0.4" provider-name="jkmh">
+	id="repository.h4nzi" name="JKMH Repository" version="1.0.5" provider-name="jkmh">
 	<extension point="xbmc.addon.repository" name="h4nzi">
 		<dir minversion="18.0.0" maxversion="21.9.0">
 			<info compressed="false">https://raw.githubusercontent.com/h4nzi/repo/master/addons.xml</info>
