@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.tools.box" name="Kodi Tools Box" version="1.1.4" provider-name="jkmh">
+<addon id="script.tools.box" name="Kodi Tools Box" version="1.1.6" provider-name="jkmh">
 	<requires>
-		<!-- <import addon="xbmc.python" version="3.0.0"/> -->
-		<import addon="virtual.network-tools" optional="true" version="19.5.119"/>
+		<import addon="xbmc.python" version="3.0.0"/>
 	</requires>
 	<extension point="xbmc.python.script" library="default.py">
 		<provides>executable</provides>

@@ -7,8 +7,8 @@
   <extension point="xbmc.addon.metadata">
     <summary lang="en_GB"></summary>
     <description lang="en_GB">Kodi Birthday Reminder</description>
-    <description lang="cs_CZ">Připomene narozeniny vašich blízkých. Určeno pro skin Confluence SCC.Pro jiné skiny nutný zásah do skinu.[CR][CR]Vytvořte textový soubor. Na každý řádek vložte jeden záznam ve formátu ddmm jméno. V nastavení addonu zadejte názex souboru, nastavte cestu k tomuto souboru a restartujte Kodi </description>
-    <license>GPL-3.0-only</license>
+    <description lang="cs_CZ">Připomenutí narozenin vašich blízkých na domácí obrazovce.[CR][CR]Doplněk pro skin Confluence SCC. Po instalaci se rozšíří možnosti v nastavení skinu. U ostatních skinů je nutná jejich dodatečná editace.</description>
+    <license>GPL 2.0</license>
     <platform>all</platform>
     <assets>
       <icon>icon.png</icon>
