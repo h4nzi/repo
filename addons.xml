@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="skin.confluence.scc.master" version="5.0.0.master-1" name="Confluence SCC Omega Master" provider-name="Jezz_X, Team Kodi, mod jkmh">
+<addon id="skin.confluence.scc.master" version="5.0.1.master-1" name="Confluence SCC Omega Master" provider-name="Jezz_X, Team Kodi, mod jkmh">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0"/>
 	</requires>
@@ -24,6 +24,7 @@
 			<screenshot>resources/screenshot-05.png</screenshot>
 			<screenshot>resources/screenshot-06.png</screenshot>
 			<screenshot>resources/screenshot-07.png</screenshot>
+			<screenshot>resources/screenshot-08.png</screenshot>
 		</assets>
 		<news>Nexus update.</news>
 		<summary lang="af_ZA">Confluence oortreksel deur Jezz_X.</summary>

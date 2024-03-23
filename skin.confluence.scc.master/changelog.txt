@@ -1,4 +1,37 @@
-[B]5.0.00[/B]
+[B]5.0.1.omega-1[/B]
+
+- změna rámečků doplňků
+- změna barvy textu doplňků
+- zvýšen počet video doplňků na 7
+
+
+[B]5.0.1[/B]
+
+- Rework versions/extras textures
+
+[B]5.0.0.omega-1[/B]
+- úpravy v mod_calendar.xml
+- zobrazit FPS
+- přesun informace o nahrávání
+- oprava středění zástupců videodoplňků
+- volba barevných žánrů v EPG
+- v SCC doplněna volba filtrů 
+- oprava zobrazení v nastavení skinu a infoboxu pro Android
+- oprava posouvání v Nastavení skinu/Úvodní obrazovka
+- oprava písma v narozeninách
+- přidáno rozšířené hodnocení
+- do lupy přidány položky Hledání v SCC, WS a YT
+- přidána informace o provedené kontrole VIP dní
+- oprava pohybu v submenu SCC
+- přidáno zobrazení VIP dní Webshare
+- přidána animace hodin
+- přidáno přeskakování reklam a návod k použití
+- změna pozadí
+- změna umístění hodin a počasí
+- přidání informační lišty (Infobox)
+- rozšířené nastavení
+
+[B]5.0.0[/B]
 
 - Add Video version support
 - Convert skin from 720p to 1080p
@@ -7,7 +40,7 @@
 - Add game agents
 - Add disabled slider texture
 
-[B]4.8.00[/B]
+[B]4.8.0[/B]
 
 - Bump skin version and update changelog
 - Add movie title format option
