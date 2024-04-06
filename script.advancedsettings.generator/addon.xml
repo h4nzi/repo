@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.advancedsettings.generator" name="Advanced Settings Generator" version="1.2.1" provider-name="jkmh">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="xbmc.addon" version="14.0.0"/>
+	</requires>
+	<extension point="xbmc.python.script" library="default.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="cs_CZ">Výpočet a uložení souboru advancedsettings.xml</summary>
+		<description lang="cs_CZ">Addon automaticky zjistí volnou paměť RAM. Podle doporučeného vzorce vypočítá a nakonfiguruje velikost cache v souboru advancedsettings.xml.[CR][CR]Bližší informace na https://repo.richardpodzemsky.cz/cache a https://kodi.wiki/view/Advancedsettings.xml</description>
+		<platform>all</platform>
+		<license>GPL 2.0</license>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
