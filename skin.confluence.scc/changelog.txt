@@ -14,6 +14,8 @@
 - Rework versions/extras textures
 
 [B]5.0.0.omega-1[/B]
+
+- přechod na skin pro Kodi Omega
 - úpravy v mod_calendar.xml
 - zobrazit FPS
 - přesun informace o nahrávání
