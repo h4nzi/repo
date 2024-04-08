@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="skin.confluence.scc" version="5.0.1.omega-2" name="Confluence SCC Omega" provider-name="Jezz_X, Team Kodi, mod jkmh">
+<addon id="skin.confluence.scc.master" version="5.0.3.master-1" name="Confluence SCC Omega Master" provider-name="Jezz_X, Team Kodi, mod jkmh">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false" effectslowdown="1.0">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080p" />
 	</extension>
-	<extension point="xbmc.service" library="scripts/services/puls.py"/>
+	<extension point="xbmc.service" library="scripts/services/tiktak.py"/>
 	<extension point="xbmc.python.script" library="scripts/scripty/vip.py" />
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
@@ -149,14 +149,14 @@
 	</extension>
 </addon>
 
-<addon id="skin.confluence.scc.master" version="5.0.1.master-2" name="Confluence SCC Omega Master" provider-name="Jezz_X, Team Kodi, mod jkmh">
+<addon id="skin.confluence.scc" version="5.0.3.omega-1" name="Confluence SCC Omega" provider-name="Jezz_X, Team Kodi, mod jkmh">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false" effectslowdown="1.0">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080p" />
 	</extension>
-	<extension point="xbmc.service" library="scripts/services/tiktak.py"/>
+	<extension point="xbmc.service" library="scripts/services/puls.py"/>
 	<extension point="xbmc.python.script" library="scripts/scripty/vip.py" />
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
