@@ -1,6 +1,15 @@
+[B]5.0.4.omega-1[/B]
+
+ - doplnění z 5.0.4
+ 
+[B]5.0.4[/B]
+
+- Add 'Check Previous Episode' addon layout
+
 [B]5.0.3.omega-1[/B]
 
 - doplněno skrytí SCC v nastavení skinu
+- Add missing variable
 
 [B]5.0.3[/B]
 
