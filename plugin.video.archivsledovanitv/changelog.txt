@@ -1,21 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<addon id="script.sledovanitv" version="1.23.0" name="Playlist SledovaniTV" provider-name="jkmh">
-    <requires>
-        <import addon="xbmc.python" version="3.0.0" />
-        <import addon="script.module.requests" />
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="main.py">
-        <provides>executable</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary lang="cs">Playlist SledovaniTV</summary>
-        <summary lang="en">Playlist SledovaniTV</summary>
-        <description lang="cs">Až 7 dní zpětného sledování televizních pořadů ze serveru SledováníTV.cz (placená služba)</description>
-        <description lang="en">Up to 7 days of watching TV programs back from the SledovaniTV.cz server (paid service)</description>
-        <assets>
-            <icon>icon.png</icon>
-        </assets>
-        <news>v1.23.0 (16.12.2022)
+v1.23.0 (16.12.2022)
 - nově možnost zapnout/vypnout aktualizaci playlistu a EPG po spuštění Kodi
 - oprava chyb (Nexus)
 
@@ -160,6 +143,3 @@ v1.1.0 (2019-03-27)
 
 v1.0.0 (2019-03-25)
 - První vydání
-        </news>
-    </extension>
-</addon>
