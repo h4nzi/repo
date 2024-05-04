@@ -1,6 +1,10 @@
+
+- vylepšené skrytí OSD po nastaveném čase
+
 [B]5.0.4.omega-1[/B]
 
- - doplnění úpravy z 5.0.4
+- doplnění úpravy z 5.0.4
+- 271 - Add color button to addon settings
  
 [B]5.0.4[/B]
 

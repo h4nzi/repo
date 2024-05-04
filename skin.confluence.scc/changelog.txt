@@ -1,4 +1,6 @@
-[B]5.0.4.omega-1[/B]
+
+
+- vylepšené skrytí OSD po nastaveném čase
 
  - doplnění z 5.0.4
  
