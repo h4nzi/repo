@@ -56,7 +56,7 @@
     </extension>
 </addon>
 
-<addon id="skin.confluence.scc" version="5.0.4.omega-1" name="Confluence SCC Omega" provider-name="Jezz_X, Team Kodi, mod jkmh">
+<addon id="skin.confluence.scc" version="5.0.5.omega-1" name="Confluence SCC Omega" provider-name="Jezz_X, Team Kodi, mod jkmh">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0"/>
 	</requires>
@@ -205,7 +205,7 @@
 	</extension>
 </addon>
 
-<addon id="skin.confluence.scc.master" version="5.0.4.master-1" name="Confluence SCC Omega Master" provider-name="Jezz_X, Team Kodi, mod jkmh">
+<addon id="skin.confluence.scc.master" version="5.0.5.master-1" name="Confluence SCC Omega Master" provider-name="Jezz_X, Team Kodi, mod jkmh">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0"/>
 	</requires>
