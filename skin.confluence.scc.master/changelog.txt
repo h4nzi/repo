@@ -1,3 +1,6 @@
+[B]5.0.5.omega-2[/B]
+- oprava skrytí OSD + DialogSeekBar
+
 [B]5.0.5.omega-1[/B]
 - Fix wrong header id
 - vylepšené skrytí OSD po nastaveném čase
