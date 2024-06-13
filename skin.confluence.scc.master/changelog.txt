@@ -1,3 +1,5 @@
+[B]5.0.5.omega-3[/B]
+- ve veřejné verzi odstranění WS Scriptu
 
 [B]5.0.5.omega-2[/B]
 - oprava skrytí OSD + DialogSeekBar
