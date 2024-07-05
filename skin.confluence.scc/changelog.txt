@@ -1,3 +1,11 @@
+[B]5.0.5.omega-4[/B]
+- volitelně v Nastavení skinu přidána položka Experimentální funkce
+- přidán reset skinu do okna Vypnout
+- volitelně změna vzhledu PVR
+- úprava vzhledu v Nastavení skinu
+
+[B]5.0.5.omega-3[/B]
+- ve veřejné verzi odstranění WS Scriptu
 
 [B]5.0.5.omega-2[/B]
 - oprava skrytí OSD + DialogSeekBar
@@ -8,7 +16,7 @@
 
 [B]5.0.4.omega-1[/B]
 
-- doplnění z 5.0.4
+- doplnění úpravy z 5.0.4
 - 271 - Add color button to addon settings
  
 [B]5.0.4[/B]

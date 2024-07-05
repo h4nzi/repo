@@ -1,3 +1,9 @@
+[B]5.0.5.omega-4[/B]
+- volitelně v Nastavení skinu přidána položka Experimentální funkce
+- přidán reset skinu do Vypnout
+- volitelně změna vzhledu PVR
+- úprava vzhledu v Nastavení skinu
+
 [B]5.0.5.omega-3[/B]
 - ve veřejné verzi odstranění WS Scriptu
 
