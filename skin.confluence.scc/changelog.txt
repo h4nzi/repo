@@ -1,3 +1,8 @@
+[B]5.0.7.omega-1[/B]
+- Fix mouse issue with subtitles dialog
+- Fix debug grid not displaying
+- rozšířená detekce ikony ŽIVĚ 
+
 [B]5.0.5.omega-4[/B]
 - volitelně v Nastavení skinu přidána položka Experimentální funkce
 - přidán reset skinu do okna Vypnout
