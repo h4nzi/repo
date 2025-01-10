@@ -1,0 +1,5 @@
+v1.0.1 (6.1.25)
+- změna akce po ukončení přehrávání
+
+v1.0.0 (5.1.25)
+- init
