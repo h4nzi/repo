@@ -3,3 +3,6 @@ v1.0.0
 
 v1.1.0
 - přidáno automatické spuštění (volitelně)
+
+v1.1.1
+- přidána editace názvů kanálů
