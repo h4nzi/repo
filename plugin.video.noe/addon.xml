@@ -1,0 +1,17 @@
+<addon id="plugin.video.noe" name="Noe TV" version="1.0.1" provider-name="jkmh">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+	<extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">TV Noe and Noe+</summary>
+        <summary lang="cs_CZ">TV Noe a Noe+</summary>
+        <description lang="cs_CZ">Jednoduchý doplněk pro sledování TV Noe a TV Noe+</description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>
