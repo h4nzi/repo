@@ -1,0 +1,866 @@
+<includes>
+	<include name="HomeMenu"><!--  nahrazuje původní hlavní lištu v Home.xml -->
+			<control type="image">
+				<left>-150</left>
+				<top>0</top>
+				<width>2220</width>
+				<height>113</height>
+				<texture border="0,6,0,6">HomeBack.png</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>8</top>
+				<width>1920</width>
+				<height>9</height>
+				<texture>HomeOverlay1.png</texture>
+			</control>
+			<control type="fixedlist" id="9000">
+					<left>-165</left>
+					<top>16</top>
+					<width>2250</width>
+					<height>90</height>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup condition="String.IsEmpty(Window(home).Property(SetDefaultHomeItem))">601</onup>
+					<onup condition="!String.IsEmpty(Window(home).Property(SetDefaultHomeItem))">9999</onup>
+					<ondown>9001</ondown>
+					<pagecontrol />
+					<scrolltime>300</scrolltime>
+					<focusposition>2</focusposition>
+					<movement>1</movement>
+					<orientation>Horizontal</orientation>
+					<itemlayout height="90" width="450">
+						<control type="image">
+							<left>0</left>
+							<top>6</top>
+							<width>1</width>
+							<height>78</height>
+							<texture>HomeSeperator.png</texture>
+						</control>
+						<control type="image">
+							<left>449</left>
+							<top>6</top>
+							<width>1</width>
+							<height>78</height>
+							<texture>HomeSeperator.png</texture>
+						</control>
+						<control type="label">
+							<left>8</left>
+							<top>0</top>
+							<width>435</width>
+							<height>90</height>
+							<font>font_MainMenu</font>
+							<textcolor>grey3</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="90" width="450">
+						<control type="image">
+							<left>0</left>
+							<top>6</top>
+							<width>1</width>
+							<height>78</height>
+							<texture>HomeSeperator.png</texture>
+						</control>
+						<control type="image">
+							<left>449</left>
+							<top>6</top>
+							<width>1</width>
+							<height>78</height>
+							<texture>HomeSeperator.png</texture>
+						</control>
+						<control type="label">
+							<left>8</left>
+							<top>0</top>
+							<width>435</width>
+							<height>90</height>
+							<font>font_MainMenu</font>
+							<textcolor>grey3</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>8</left>
+							<top>0</top>
+							<width>435</width>
+							<height>90</height>
+							<font>font_MainMenu</font>
+							<textcolor>blue</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Control.HasFocus(9000)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+					</focusedlayout>
+						<content>
+							<include content="HomeMenuItem" condition="!Skin.HasSetting(slot1_show_none)">
+								<param name="show_movies" value="Skin.HasSetting(slot1_show_movies)" />
+								<param name="show_tvshows" value="Skin.HasSetting(slot1_show_tvshows)" />
+								<param name="show_music" value="Skin.HasSetting(slot1_show_music)" />
+								<param name="show_scc" value="Skin.HasSetting(slot1_show_scc)" />
+								<param name="show_tv" value="Skin.HasSetting(slot1_show_tv)" />
+								<param name="show_radio" value="Skin.HasSetting(slot1_show_radio)" />
+								<param name="show_games" value="Skin.HasSetting(slot1_show_games)" />
+								<param name="show_addons" value="Skin.HasSetting(slot1_show_addons)" />
+								<param name="show_pictures" value="Skin.HasSetting(slot1_show_pictures)" />
+								<param name="show_videos" value="Skin.HasSetting(slot1_show_videos)" />
+								<param name="show_favorites" value="Skin.HasSetting(slot1_show_favorites)" />
+								<param name="show_weather" value="Skin.HasSetting(slot1_show_weather) | !$EXP[HasMenuSlot1]" />
+								<param name="show_system" value="Skin.HasSetting(slot1_show_system)" />
+								<param name="show_power" value="Skin.HasSetting(slot1_show_power)" />
+							</include>
+							<include content="HomeMenuItem" condition="!Skin.HasSetting(slot2_show_none)">
+								<param name="show_movies" value="Skin.HasSetting(slot2_show_movies)" />
+								<param name="show_tvshows" value="Skin.HasSetting(slot2_show_tvshows)" />
+								<param name="show_music" value="Skin.HasSetting(slot2_show_music)" />
+								<param name="show_scc" value="Skin.HasSetting(slot2_show_scc)" />
+								<param name="show_tv" value="Skin.HasSetting(slot2_show_tv)" />
+								<param name="show_radio" value="Skin.HasSetting(slot2_show_radio)" />
+								<param name="show_games" value="Skin.HasSetting(slot2_show_games)" />
+								<param name="show_addons" value="Skin.HasSetting(slot2_show_addons)" />
+								<param name="show_pictures" value="Skin.HasSetting(slot2_show_pictures) | !$EXP[HasMenuSlot2]" />
+								<param name="show_videos" value="Skin.HasSetting(slot2_show_videos)" />
+								<param name="show_favorites" value="Skin.HasSetting(slot2_show_favorites)" />
+								<param name="show_weather" value="Skin.HasSetting(slot2_show_weather)" />
+								<param name="show_system" value="Skin.HasSetting(slot2_show_system)" />
+								<param name="show_power" value="Skin.HasSetting(slot2_show_power)" />
+							</include>
+							<include content="HomeMenuItem" condition="!Skin.HasSetting(slot3_show_none)">
+								<param name="show_movies" value="Skin.HasSetting(slot3_show_movies)" />
+								<param name="show_tvshows" value="Skin.HasSetting(slot3_show_tvshows)" />
+								<param name="show_music" value="Skin.HasSetting(slot3_show_music)" />
+								<param name="show_scc" value="Skin.HasSetting(slot3_show_scc)" />
+								<param name="show_tv" value="Skin.HasSetting(slot3_show_tv)" />
+								<param name="show_radio" value="Skin.HasSetting(slot3_show_radio)" />
+								<param name="show_games" value="Skin.HasSetting(slot3_show_games) | !$EXP[HasMenuSlot3]" />
+								<param name="show_addons" value="Skin.HasSetting(slot3_show_addons)" />
+								<param name="show_pictures" value="Skin.HasSetting(slot3_show_pictures)" />
+								<param name="show_videos" value="Skin.HasSetting(slot3_show_videos)" />
+								<param name="show_favorites" value="Skin.HasSetting(slot3_show_favorites)" />
+								<param name="show_weather" value="Skin.HasSetting(slot3_show_weather)" />
+								<param name="show_system" value="Skin.HasSetting(slot3_show_system)" />
+								<param name="show_power" value="Skin.HasSetting(slot3_show_power)" />
+							</include>
+							<include content="HomeMenuItem" condition="!Skin.HasSetting(slot4_show_none)">
+								<param name="show_movies" value="Skin.HasSetting(slot4_show_movies)" />
+								<param name="show_tvshows" value="Skin.HasSetting(slot4_show_tvshows)" />
+								<param name="show_music" value="Skin.HasSetting(slot4_show_music)" />
+								<param name="show_scc" value="Skin.HasSetting(slot4_show_scc)" />
+								<param name="show_tv" value="Skin.HasSetting(slot4_show_tv)" />
+								<param name="show_radio" value="Skin.HasSetting(slot4_show_radio) | !$EXP[HasMenuSlot4]" />
+								<param name="show_games" value="Skin.HasSetting(slot4_show_games)" />
+								<param name="show_addons" value="Skin.HasSetting(slot4_show_addons)" />
+								<param name="show_pictures" value="Skin.HasSetting(slot4_show_pictures)" />
+								<param name="show_videos" value="Skin.HasSetting(slot4_show_videos)" />
+								<param name="show_favorites" value="Skin.HasSetting(slot4_show_favorites)" />
+								<param name="show_weather" value="Skin.HasSetting(slot4_show_weather)" />
+								<param name="show_system" value="Skin.HasSetting(slot4_show_system)" />
+								<param name="show_power" value="Skin.HasSetting(slot4_show_power)" />
+							</include>
+							<include content="HomeMenuItem" condition="!Skin.HasSetting(slot5_show_none)">
+								<param name="show_movies" value="Skin.HasSetting(slot5_show_movies)" />
+								<param name="show_tvshows" value="Skin.HasSetting(slot5_show_tvshows)" />
+								<param name="show_music" value="Skin.HasSetting(slot5_show_music)" />
+								<param name="show_scc" value="Skin.HasSetting(slot5_show_scc)" />
+								<param name="show_tv" value="Skin.HasSetting(slot5_show_tv) | !$EXP[HasMenuSlot5]" />
+								<param name="show_radio" value="Skin.HasSetting(slot5_show_radio)" />
+								<param name="show_games" value="Skin.HasSetting(slot5_show_games)" />
+								<param name="show_addons" value="Skin.HasSetting(slot5_show_addons)" />
+								<param name="show_pictures" value="Skin.HasSetting(slot5_show_pictures)" />
+								<param name="show_videos" value="Skin.HasSetting(slot5_show_videos)" />
+								<param name="show_favorites" value="Skin.HasSetting(slot5_show_favorites)" />
+								<param name="show_weather" value="Skin.HasSetting(slot5_show_weather)" />
+								<param name="show_system" value="Skin.HasSetting(slot5_show_system)" />
+								<param name="show_power" value="Skin.HasSetting(slot5_show_power)" />
+							</include>
+							<include content="HomeMenuItem" condition="!Skin.HasSetting(slot6_show_none)">
+								<param name="show_movies" value="Skin.HasSetting(slot6_show_movies)" />
+								<param name="show_tvshows" value="Skin.HasSetting(slot6_show_tvshows)" />
+								<param name="show_music" value="Skin.HasSetting(slot6_show_music)" />
+								<param name="show_scc" value="Skin.HasSetting(slot6_show_scc) | !$EXP[HasMenuSlot6]" />
+								<param name="show_tv" value="Skin.HasSetting(slot6_show_tv)" />
+								<param name="show_radio" value="Skin.HasSetting(slot6_show_radio)" />
+								<param name="show_games" value="Skin.HasSetting(slot6_show_games)" />
+								<param name="show_addons" value="Skin.HasSetting(slot6_show_addons)" />
+								<param name="show_pictures" value="Skin.HasSetting(slot6_show_pictures)" />
+								<param name="show_videos" value="Skin.HasSetting(slot6_show_videos)" />
+								<param name="show_favorites" value="Skin.HasSetting(slot6_show_favorites)" />
+								<param name="show_weather" value="Skin.HasSetting(slot6_show_weather)" />
+								<param name="show_system" value="Skin.HasSetting(slot6_show_system)" />
+								<param name="show_power" value="Skin.HasSetting(slot6_show_power)" />
+							</include>
+							<include content="HomeMenuItem" condition="!Skin.HasSetting(slot7_show_none)">
+								<param name="show_movies" value="Skin.HasSetting(slot7_show_movies)" />
+								<param name="show_tvshows" value="Skin.HasSetting(slot7_show_tvshows)" />
+								<param name="show_music" value="Skin.HasSetting(slot7_show_music)" />
+								<param name="show_scc" value="Skin.HasSetting(slot7_show_scc)" />
+								<param name="show_tv" value="Skin.HasSetting(slot7_show_tv)" />
+								<param name="show_radio" value="Skin.HasSetting(slot7_show_radio)" />
+								<param name="show_games" value="Skin.HasSetting(slot7_show_games)" />
+								<param name="show_addons" value="Skin.HasSetting(slot7_show_addons)" />
+								<param name="show_pictures" value="Skin.HasSetting(slot7_show_pictures)" />
+								<param name="show_videos" value="Skin.HasSetting(slot7_show_videos) | !$EXP[HasMenuSlot7]" />
+								<param name="show_favorites" value="Skin.HasSetting(slot7_show_favorites)" />
+								<param name="show_weather" value="Skin.HasSetting(slot7_show_weather)" />
+								<param name="show_system" value="Skin.HasSetting(slot7_show_system)" />
+								<param name="show_power" value="Skin.HasSetting(slot7_show_power)" />
+							</include>
+							<include content="HomeMenuItem" condition="!Skin.HasSetting(slot8_show_none)">
+								<param name="show_movies" value="Skin.HasSetting(slot8_show_movies) | !$EXP[HasMenuSlot8]" />
+								<param name="show_tvshows" value="Skin.HasSetting(slot8_show_tvshows)" />
+								<param name="show_music" value="Skin.HasSetting(slot8_show_music)" />
+								<param name="show_scc" value="Skin.HasSetting(slot8_show_scc)" />
+								<param name="show_tv" value="Skin.HasSetting(slot8_show_tv)" />
+								<param name="show_radio" value="Skin.HasSetting(slot8_show_radio)" />
+								<param name="show_games" value="Skin.HasSetting(slot8_show_games)" />
+								<param name="show_addons" value="Skin.HasSetting(slot8_show_addons)" />
+								<param name="show_pictures" value="Skin.HasSetting(slot8_show_pictures)" />
+								<param name="show_videos" value="Skin.HasSetting(slot8_show_videos)" />
+								<param name="show_favorites" value="Skin.HasSetting(slot8_show_favorites)" />
+								<param name="show_weather" value="Skin.HasSetting(slot8_show_weather)" />
+								<param name="show_system" value="Skin.HasSetting(slot8_show_system)" />
+								<param name="show_power" value="Skin.HasSetting(slot8_show_power)" />
+							</include>
+							<include content="HomeMenuItem" condition="!Skin.HasSetting(slot9_show_none)">
+								<param name="show_movies" value="Skin.HasSetting(slot9_show_movies)" />
+								<param name="show_tvshows" value="Skin.HasSetting(slot9_show_tvshows) | !$EXP[HasMenuSlot9]" />
+								<param name="show_music" value="Skin.HasSetting(slot9_show_music)" />
+								<param name="show_scc" value="Skin.HasSetting(slot9_show_scc)" />
+								<param name="show_tv" value="Skin.HasSetting(slot9_show_tv)" />
+								<param name="show_radio" value="Skin.HasSetting(slot9_show_radio)" />
+								<param name="show_games" value="Skin.HasSetting(slot9_show_games)" />
+								<param name="show_addons" value="Skin.HasSetting(slot9_show_addons)" />
+								<param name="show_pictures" value="Skin.HasSetting(slot9_show_pictures)" />
+								<param name="show_videos" value="Skin.HasSetting(slot9_show_videos)" />
+								<param name="show_favorites" value="Skin.HasSetting(slot9_show_favorites)" />
+								<param name="show_weather" value="Skin.HasSetting(slot9_show_weather)" />
+								<param name="show_system" value="Skin.HasSetting(slot9_show_system)" />
+								<param name="show_power" value="Skin.HasSetting(slot9_show_power)" />
+							</include>
+							<include content="HomeMenuItem" condition="!Skin.HasSetting(slot10_show_none)">
+								<param name="show_movies" value="Skin.HasSetting(slot10_show_movies)" />
+								<param name="show_tvshows" value="Skin.HasSetting(slot10_show_tvshows)" />
+								<param name="show_music" value="Skin.HasSetting(slot10_show_music) | !$EXP[HasMenuSlot10]" />
+								<param name="show_scc" value="Skin.HasSetting(slot10_show_scc)" />
+								<param name="show_tv" value="Skin.HasSetting(slot10_show_tv)" />
+								<param name="show_radio" value="Skin.HasSetting(slot10_show_radio)" />
+								<param name="show_games" value="Skin.HasSetting(slot10_show_games)" />
+								<param name="show_addons" value="Skin.HasSetting(slot10_show_addons)" />
+								<param name="show_pictures" value="Skin.HasSetting(slot10_show_pictures)" />
+								<param name="show_videos" value="Skin.HasSetting(slot10_show_videos)" />
+								<param name="show_favorites" value="Skin.HasSetting(slot10_show_favorites)" />
+								<param name="show_weather" value="Skin.HasSetting(slot10_show_weather)" />
+								<param name="show_system" value="Skin.HasSetting(slot10_show_system)" />
+								<param name="show_power" value="Skin.HasSetting(slot10_show_power)" />
+							</include>
+							<include content="HomeMenuItem" condition="!Skin.HasSetting(slot11_show_none)">
+								<param name="show_movies" value="Skin.HasSetting(slot11_show_movies)" />
+								<param name="show_tvshows" value="Skin.HasSetting(slot11_show_tvshows)" />
+								<param name="show_music" value="Skin.HasSetting(slot11_show_music)" />
+								<param name="show_scc" value="Skin.HasSetting(slot11_show_scc)" />
+								<param name="show_tv" value="Skin.HasSetting(slot11_show_tv)" />
+								<param name="show_radio" value="Skin.HasSetting(slot11_show_radio)" />
+								<param name="show_games" value="Skin.HasSetting(slot11_show_games)" />
+								<param name="show_addons" value="Skin.HasSetting(slot11_show_addons) | !$EXP[HasMenuSlot11]" />
+								<param name="show_pictures" value="Skin.HasSetting(slot11_show_pictures)" />
+								<param name="show_videos" value="Skin.HasSetting(slot11_show_videos)" />
+								<param name="show_favorites" value="Skin.HasSetting(slot11_show_favorites)" />
+								<param name="show_weather" value="Skin.HasSetting(slot11_show_weather)" />
+								<param name="show_system" value="Skin.HasSetting(slot11_show_system)" />
+								<param name="show_power" value="Skin.HasSetting(slot11_show_power)" />
+							</include>
+							<include content="HomeMenuItem" condition="!Skin.HasSetting(slot12_show_none)">
+								<param name="show_movies" value="Skin.HasSetting(slot12_show_movies)" />
+								<param name="show_tvshows" value="Skin.HasSetting(slot12_show_tvshows)" />
+								<param name="show_music" value="Skin.HasSetting(slot12_show_music)" />
+								<param name="show_scc" value="Skin.HasSetting(slot12_show_scc)" />
+								<param name="show_tv" value="Skin.HasSetting(slot12_show_tv)" />
+								<param name="show_radio" value="Skin.HasSetting(slot12_show_radio)" />
+								<param name="show_games" value="Skin.HasSetting(slot12_show_games)" />
+								<param name="show_addons" value="Skin.HasSetting(slot12_show_addons)" />
+								<param name="show_pictures" value="Skin.HasSetting(slot12_show_pictures)" />
+								<param name="show_videos" value="Skin.HasSetting(slot12_show_videos)" />
+								<param name="show_favorites" value="Skin.HasSetting(slot12_show_favorites)" />
+								<param name="show_weather" value="Skin.HasSetting(slot12_show_weather)" />
+								<param name="show_system" value="Skin.HasSetting(slot12_show_system) | !$EXP[HasMenuSlot12]" />
+								<param name="show_power" value="Skin.HasSetting(slot12_show_power)" />
+							</include>
+							<include content="HomeMenuItem" condition="!Skin.HasSetting(slot13_show_none)">
+								<param name="show_movies" value="Skin.HasSetting(slot13_show_movies)" />
+								<param name="show_tvshows" value="Skin.HasSetting(slot13_show_tvshows)" />
+								<param name="show_music" value="Skin.HasSetting(slot13_show_music)" />
+								<param name="show_scc" value="Skin.HasSetting(slot13_show_scc)" />
+								<param name="show_tv" value="Skin.HasSetting(slot13_show_tv)" />
+								<param name="show_radio" value="Skin.HasSetting(slot13_show_radio)" />
+								<param name="show_games" value="Skin.HasSetting(slot13_show_games)" />
+								<param name="show_addons" value="Skin.HasSetting(slot13_show_addons)" />
+								<param name="show_pictures" value="Skin.HasSetting(slot13_show_pictures)" />
+								<param name="show_videos" value="Skin.HasSetting(slot13_show_videos)" />
+								<param name="show_favorites" value="Skin.HasSetting(slot13_show_favorites)" />
+								<param name="show_weather" value="Skin.HasSetting(slot13_show_weather)" />
+								<param name="show_system" value="Skin.HasSetting(slot13_show_system)" />
+								<param name="show_power" value="Skin.HasSetting(slot13_show_power) | !$EXP[HasMenuSlot13]" />
+							</include>
+							<item>
+								<label>$LOCALIZE[427]</label>
+								<onclick>PlayDisc</onclick>
+								<property name="menu_id">$NUMBER[21000]</property>
+								<thumb>icons/sidemenu/disc.png</thumb>
+								<property name="id">disc</property>
+								<visible>System.HasMediaDVD</visible>
+							</item>
+						</content>
+			</control>
+			<control type="image">
+				<left>-15</left>
+				<top>9</top>
+				<width>207</width>
+				<height>95</height>
+				<texture>SideFade.png</texture>
+			</control>
+			<control type="image">
+				<left>192r</left>
+				<top>9</top>
+				<width>207</width>
+				<height>95</height>
+				<texture flipx="true">SideFade.png</texture>
+			</control>
+	</include>
+				
+	<include name="HomeMenuItem">
+		<param name="show_movies" />
+		<param name="show_tvshows" />
+		<param name="show_music" />
+		<param name="show_scc" />
+		<param name="show_tv" />
+		<param name="show_radio" />
+		<param name="show_games" />
+		<param name="show_addons" />
+		<param name="show_pictures" />
+		<param name="show_videos" />
+		<param name="show_favorites" />
+		<param name="show_weather" />
+		<param name="show_system" />
+		<param name="show_power" />
+		<definition>
+			<include condition="$PARAM[show_movies]">HomeMenuItemMovies</include>
+			<include condition="$PARAM[show_tvshows]">HomeMenuItemTVShows</include>
+			<include condition="$PARAM[show_music]">HomeMenuItemMusic</include>
+			<include condition="$PARAM[show_scc]">HomeMenuItemSCC</include>
+			<include condition="$PARAM[show_tv]">HomeMenuItemTV</include>
+			<include condition="$PARAM[show_radio]">HomeMenuItemRadio</include>
+			<include condition="$PARAM[show_games]">HomeMenuItemGames</include>
+			<include condition="$PARAM[show_addons]">HomeMenuItemAddons</include>
+			<include condition="$PARAM[show_pictures]">HomeMenuItemPictures</include>
+			<include condition="$PARAM[show_videos]">HomeMenuItemVideos</include>
+			<include condition="$PARAM[show_favorites]">HomeMenuItemFavorites</include>
+			<include condition="$PARAM[show_weather]">HomeMenuItemWeather</include>
+			<include condition="$PARAM[show_system]">HomeMenuItemSystem</include>
+			<include condition="$PARAM[show_power]">HomeMenuItemPower</include>
+		</definition>
+	</include>
+	<include name="HomeMenuItemMovies">
+		<item id="10">
+			<label>$LOCALIZE[31954]</label>
+			<onclick condition="System.IsMaster | !Skin.HasSetting(HomeMenuMovieUsePlaylist)">ActivateWindow(Videos,MovieTitles,return)</onclick>
+			<onclick condition="!System.IsMaster + Skin.HasSetting(HomeMenuMovieUsePlaylist)">ActivateWindow(Videos,$INFO[Skin.String(HomeMenuMoviePlaylist)],return)</onclick>
+			<icon />
+			<thumb />
+			<property name="id">movies</property>
+		</item>
+	</include>
+	<include name="HomeMenuItemTVShows">
+		<item id="11">
+			<label>$LOCALIZE[31955]</label>
+			<onclick condition="System.IsMaster | !Skin.HasSetting(HomeMenuTVShowUsePlaylist)">ActivateWindow(Videos,TVShowTitles,return)</onclick>
+			<onclick condition="!System.IsMaster + Skin.HasSetting(HomeMenuTVShowUsePlaylist)">ActivateWindow(Videos,$INFO[Skin.String(HomeMenuTVShowPlaylist)],return)</onclick>
+			<icon />
+			<thumb />
+			<property name="id">tvshows</property>
+		</item>
+	</include>
+	<include name="HomeMenuItemMusic">
+		<item id="3">
+			<label>$LOCALIZE[31956]</label>
+			<onclick condition="[System.IsMaster | !Skin.HasSetting(HomeMenuMusicUsePlaylist)] + String.IsEqual(Window.Property(MusicDirectLink),True)">ActivateWindow(Music)</onclick>
+			<onclick condition="[System.IsMaster | !Skin.HasSetting(HomeMenuMusicUsePlaylist)] + !String.IsEqual(Window.Property(MusicDirectLink),True)">ActivateWindow(Music,root)</onclick>
+			<icon />
+			<thumb />
+			<property name="id">music</property>
+		</item>
+	</include>
+	<include name="HomeMenuItemSCC">
+		<item id="15">
+			<label>$LOCALIZE[31949]</label>
+			<property name="menu_id">$NUMBER[16000]</property>
+			<onclick>RunAddon(plugin.video.stream-cinema-2-release)</onclick>
+			<onclick>RunScript(special://skin/scripts/scripty/vip.py)</onclick>
+			<icon />
+			<thumb />
+			<property name="id">scc</property>
+		</item>
+	</include>
+	<include name="HomeMenuItemTV">
+		<item id="12">
+			<label>$LOCALIZE[31952]</label>
+			<property name="menu_id">$NUMBER[12000]</property>
+			<onclick>ActivateWindow(TVChannels)</onclick>
+			<icon />
+			<thumb />
+			<property name="id">livetv</property>
+		</item>
+	</include>
+	<include name="HomeMenuItemRadio">
+		<item id="13">
+			<label>$LOCALIZE[31960]</label>
+			<onclick>ActivateWindow(RadioChannels)</onclick>
+			<icon />
+			<thumb />
+			<property name="id">radio</property>
+		</item>
+	</include>
+	<include name="HomeMenuItemGames">
+		<item id="14">
+			<label>$LOCALIZE[31001]</label>
+			<onclick>ActivateWindow(games)</onclick>
+			<icon />
+			<thumb />
+			<property name="id">games</property>
+		</item>
+	</include>
+	<include name="HomeMenuItemAddons">
+		<item id="1">
+			<label>$LOCALIZE[31957]</label>
+			<onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
+			<onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
+			<icon />
+			<thumb />
+			<property name="id">addons</property>
+		</item>
+	</include>
+	<include name="HomeMenuItemPictures">
+		<item id="4">
+			<label>$LOCALIZE[31951]</label>
+			<onclick>ActivateWindow(Pictures)</onclick>
+			<icon />
+			<thumb />
+			<property name="id">pictures</property>
+		</item>
+	</include>
+	<include name="HomeMenuItemVideos">
+		<item id="2">
+			<label>$LOCALIZE[31953]</label>
+			<onclick condition="String.IsEqual(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos)</onclick>
+			<onclick condition="!String.IsEqual(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos,root)</onclick>
+			<icon />
+			<thumb />
+			<property name="id">video</property>
+		</item>
+	</include>
+	<include name="HomeMenuItemFavorites">
+		<item id="17">
+			<label>$LOCALIZE[31948]</label>
+			<onclick>ActivateWindow(favouritesbrowser)</onclick>
+			<icon />
+			<thumb />
+			<property name="id">favorites</property>
+		</item>
+	</include>
+	<include name="HomeMenuItemWeather">
+		<item id="7">
+			<label>$LOCALIZE[31950]</label>
+			<onclick condition="!String.IsEmpty(Weather.Plugin)">ActivateWindow(Weather)</onclick>
+			<onclick condition="String.IsEmpty(Weather.Plugin)">ReplaceWindow(servicesettings,weather)</onclick>
+			<icon />
+			<thumb />
+			<property name="id">weather</property>
+		</item>
+	</include>
+	<include name="HomeMenuItemSystem">
+		<item id="5">
+			<label>$LOCALIZE[31959]</label>
+			<onclick>ActivateWindow(Settings)</onclick>
+			<icon />
+			<thumb />
+			<property name="id">system</property>
+		</item>
+	</include>
+	<include name="HomeMenuItemPower">
+		<item id="18">
+			<label>VYPNOUT</label>
+			<onclick>ActivateWindow(shutdownmenu)</onclick>
+			<icon />
+			<thumb />
+			<property name="id">power</property>
+		</item>
+	</include>
+	
+	<include name="HomeMenuSetting">
+			<control type="label" id="1100">
+				<width>1125</width>
+				<height>68</height>
+				<font>font13_title</font>
+				<label>Uspořádat menu na úvodní obrazovce</label>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="button" id="1101">
+				<include>DefaultSettingButton</include>
+				<label>$LOCALIZE[396] 1</label>
+				<onclick>Skin.SelectBool(31504, 8|slot1_show_weather,1|slot1_show_pictures, 15016|slot1_show_games,19021|slot1_show_radio, 19020|slot1_show_tv, 10134|slot1_show_favorites,  31949|slot1_show_scc, 3|slot1_show_videos, 342|slot1_show_movies, 20343|slot1_show_tvshows, 2|slot1_show_music, 24001|slot1_show_addons, 31114|slot1_show_system, 13005|slot1_show_power,  31111|slot1_show_none)</onclick>
+				<label2>$VAR[HomeMenuSlot1Label2Var]</label2>
+			</control>
+			<control type="button" id="1102">
+				<label>$LOCALIZE[396] 2</label>
+				<include>DefaultSettingButton</include>
+				<onclick>Skin.SelectBool(31504, 8|slot2_show_weather,1|slot2_show_pictures, 15016|slot2_show_games,19021|slot2_show_radio, 19020|slot2_show_tv, 10134|slot2_show_favorites,  31949|slot2_show_scc, 3|slot2_show_videos, 342|slot2_show_movies, 20343|slot2_show_tvshows, 2|slot2_show_music, 24001|slot2_show_addons, 31114|slot2_show_system, 13005|slot2_show_power,  31111|slot2_show_none)</onclick>
+				<label2>$VAR[HomeMenuSlot2Label2Var]</label2>
+			</control>
+			<control type="button" id="1103">
+				<label>$LOCALIZE[396] 3</label>
+				<include>DefaultSettingButton</include>
+				<onclick>Skin.SelectBool(31504, 8|slot3_show_weather,1|slot3_show_pictures, 15016|slot3_show_games,19021|slot3_show_radio, 19020|slot3_show_tv, 10134|slot3_show_favorites,  31949|slot3_show_scc, 3|slot3_show_videos, 342|slot3_show_movies, 20343|slot3_show_tvshows, 2|slot3_show_music, 24001|slot3_show_addons, 31114|slot3_show_system, 13005|slot3_show_power,  31111|slot3_show_none)</onclick>
+				<label2>$VAR[HomeMenuSlot3Label2Var]</label2>
+			</control>
+			<control type="button" id="1104">
+				<label>$LOCALIZE[396] 4</label>
+				<include>DefaultSettingButton</include>
+				<onclick>Skin.SelectBool(31504, 8|slot4_show_weather,1|slot4_show_pictures, 15016|slot4_show_games,19021|slot4_show_radio, 19020|slot4_show_tv, 10134|slot4_show_favorites,  31949|slot4_show_scc, 3|slot4_show_videos, 342|slot4_show_movies, 20343|slot4_show_tvshows, 2|slot4_show_music, 24001|slot4_show_addons, 31114|slot4_show_system, 13005|slot4_show_power,  31111|slot4_show_none)</onclick>
+				<label2>$VAR[HomeMenuSlot4Label2Var]</label2>
+			</control>
+			<control type="button" id="1105">
+				<label>$LOCALIZE[396] 5</label>
+				<include>DefaultSettingButton</include>
+				<onclick>Skin.SelectBool(31504, 8|slot5_show_weather,1|slot5_show_pictures, 15016|slot5_show_games,19021|slot5_show_radio, 19020|slot5_show_tv, 10134|slot5_show_favorites,  31949|slot5_show_scc, 3|slot5_show_videos, 342|slot5_show_movies, 20343|slot5_show_tvshows, 2|slot5_show_music, 24001|slot5_show_addons, 31114|slot5_show_system, 13005|slot5_show_power,  31111|slot5_show_none)</onclick>
+				<label2>$VAR[HomeMenuSlot5Label2Var]</label2>
+			</control>
+			<control type="button" id="1106">
+				<label>$LOCALIZE[396] 6</label>
+				<include>DefaultSettingButton</include>
+				<onclick>Skin.SelectBool(31504, 8|slot6_show_weather,1|slot6_show_pictures, 15016|slot6_show_games,19021|slot6_show_radio, 19020|slot6_show_tv, 10134|slot6_show_favorites,  31949|slot6_show_scc, 3|slot6_show_videos, 342|slot6_show_movies, 20343|slot6_show_tvshows, 2|slot6_show_music, 24001|slot6_show_addons, 31114|slot6_show_system, 13005|slot6_show_power,  31111|slot6_show_none)</onclick>
+				<label2>$VAR[HomeMenuSlot6Label2Var]</label2>
+			</control>
+			<control type="button" id="1107">
+				<label>$LOCALIZE[396] 7</label>
+				<include>DefaultSettingButton</include>
+				<onclick>Skin.SelectBool(31504, 8|slot7_show_weather,1|slot7_show_pictures, 15016|slot7_show_games,19021|slot7_show_radio, 19020|slot7_show_tv, 10134|slot7_show_favorites,  31949|slot7_show_scc, 3|slot7_show_videos, 342|slot7_show_movies, 20343|slot7_show_tvshows, 2|slot7_show_music, 24001|slot7_show_addons, 31114|slot7_show_system, 13005|slot7_show_power,  31111|slot7_show_none)</onclick>
+				<label2>$VAR[HomeMenuSlot7Label2Var]</label2>
+			</control>
+			<control type="button" id="1108">
+				<label>$LOCALIZE[396] 8</label>
+				<include>DefaultSettingButton</include>
+				<onclick>Skin.SelectBool(31504, 8|slot8_show_weather,1|slot8_show_pictures, 15016|slot8_show_games,19021|slot8_show_radio, 19020|slot8_show_tv, 10134|slot8_show_favorites,  31949|slot8_show_scc, 3|slot8_show_videos, 342|slot8_show_movies, 20343|slot8_show_tvshows, 2|slot8_show_music, 24001|slot8_show_addons, 31114|slot8_show_system, 13005|slot8_show_power,  31111|slot8_show_none)</onclick>
+				<label2>$VAR[HomeMenuSlot8Label2Var]</label2>
+			</control>
+			<control type="button" id="1109">
+				<label>$LOCALIZE[396] 9</label>
+				<include>DefaultSettingButton</include>
+				<onclick>Skin.SelectBool(31504, 8|slot9_show_weather,1|slot9_show_pictures, 15016|slot9_show_games,19021|slot9_show_radio, 19020|slot9_show_tv, 10134|slot9_show_favorites,  31949|slot9_show_scc, 3|slot9_show_videos, 342|slot9_show_movies, 20343|slot9_show_tvshows, 2|slot9_show_music, 24001|slot9_show_addons, 31114|slot9_show_system, 13005|slot9_show_power,  31111|slot9_show_none)</onclick>
+				<label2>$VAR[HomeMenuSlot9Label2Var]</label2>
+			</control>
+			<control type="button" id="1110">
+				<label>$LOCALIZE[396] 10</label>
+				<include>DefaultSettingButton</include>
+				<onclick>Skin.SelectBool(31504, 8|slot10_show_weather,1|slot10_show_pictures, 15016|slot10_show_games,19021|slot10_show_radio, 19020|slot10_show_tv, 10134|slot10_show_favorites,  31949|slot10_show_scc, 3|slot10_show_videos, 342|slot10_show_movies, 20343|slot10_show_tvshows, 2|slot10_show_music, 24001|slot10_show_addons, 31114|slot10_show_system, 13005|slot10_show_power,  31111|slot10_show_none)</onclick>
+				<label2>$VAR[HomeMenuSlot10Label2Var]</label2>
+			</control>
+			<control type="button" id="1111">
+				<label>$LOCALIZE[396] 11</label>
+				<include>DefaultSettingButton</include>
+				<onclick>Skin.SelectBool(31504, 8|slot11_show_weather,1|slot11_show_pictures, 15016|slot11_show_games,19021|slot11_show_radio, 19020|slot11_show_tv, 10134|slot11_show_favorites,  31949|slot11_show_scc, 3|slot11_show_videos, 342|slot11_show_movies, 20343|slot11_show_tvshows, 2|slot11_show_music, 24001|slot11_show_addons, 31114|slot11_show_system, 13005|slot11_show_power,  31111|slot11_show_none)</onclick>
+				<label2>$VAR[HomeMenuSlot11Label2Var]</label2>
+			</control>
+			<control type="button" id="1112">
+				<label>$LOCALIZE[396] 12</label>
+				<include>DefaultSettingButton</include>
+				<onclick>Skin.SelectBool(31504, 8|slot12_show_weather,1|slot12_show_pictures, 15016|slot12_show_games,19021|slot12_show_radio, 19020|slot12_show_tv, 10134|slot12_show_favorites,  31949|slot12_show_scc, 3|slot12_show_videos, 342|slot12_show_movies, 20343|slot12_show_tvshows, 2|slot12_show_music, 24001|slot12_show_addons, 31114|slot12_show_system, 13005|slot12_show_power,  31111|slot12_show_none)</onclick>
+				<label2>$VAR[HomeMenuSlot12Label2Var]</label2>
+			</control>
+			<control type="button" id="1113">
+				<label>$LOCALIZE[396] 13</label>
+				<include>DefaultSettingButton</include>
+				<onclick>Skin.SelectBool(31504, 8|slot13_show_weather,1|slot13_show_pictures, 15016|slot13_show_games,19021|slot13_show_radio, 19020|slot13_show_tv, 10134|slot13_show_favorites,  31949|slot13_show_scc, 3|slot13_show_videos, 342|slot13_show_movies, 20343|slot13_show_tvshows, 2|slot13_show_music, 24001|slot13_show_addons, 31114|slot13_show_system, 13005|slot13_show_power, 31111|slot13_show_none)</onclick>
+				<label2>$VAR[HomeMenuSlot13Label2Var]</label2>
+			</control>
+	</include>
+	
+	<variable name="HomeMenuSlot1Label2Var">
+		<value condition="Skin.HasSetting(slot1_show_none)">$LOCALIZE[31111]</value>
+		<value condition="Skin.HasSetting(slot1_show_movies)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(slot1_show_tvshows)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(slot1_show_music)">$LOCALIZE[2]</value>
+		<value condition="Skin.HasSetting(slot1_show_scc)">$LOCALIZE[31949]</value>
+		<value condition="Skin.HasSetting(slot1_show_tv)">$LOCALIZE[19020]</value>
+		<value condition="Skin.HasSetting(slot1_show_radio)">$LOCALIZE[19021]</value>
+		<value condition="Skin.HasSetting(slot1_show_games)">$LOCALIZE[15016]</value>
+		<value condition="Skin.HasSetting(slot1_show_addons)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(slot1_show_pictures)">$LOCALIZE[1]</value>
+		<value condition="Skin.HasSetting(slot1_show_videos)">$LOCALIZE[3]</value>
+		<value condition="Skin.HasSetting(slot1_show_favorites)">$LOCALIZE[10134]</value>
+		<value condition="Skin.HasSetting(slot1_show_weather)">$LOCALIZE[8]</value>
+		<value condition="Skin.HasSetting(slot1_show_system)">$LOCALIZE[31114]</value>
+		<value condition="Skin.HasSetting(slot1_show_power)">$LOCALIZE[13005]</value>
+		<value>$LOCALIZE[8]</value>
+	</variable>
+	<variable name="HomeMenuSlot2Label2Var">
+		<value condition="Skin.HasSetting(slot2_show_none)">$LOCALIZE[31111]</value>
+		<value condition="Skin.HasSetting(slot2_show_movies)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(slot2_show_tvshows)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(slot2_show_music)">$LOCALIZE[2]</value>
+		<value condition="Skin.HasSetting(slot2_show_scc)">$LOCALIZE[31949]</value>
+		<value condition="Skin.HasSetting(slot2_show_tv)">$LOCALIZE[19020]</value>
+		<value condition="Skin.HasSetting(slot2_show_radio)">$LOCALIZE[19021]</value>
+		<value condition="Skin.HasSetting(slot2_show_games)">$LOCALIZE[15016]</value>
+		<value condition="Skin.HasSetting(slot2_show_addons)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(slot2_show_pictures)">$LOCALIZE[1]</value>
+		<value condition="Skin.HasSetting(slot2_show_videos)">$LOCALIZE[3]</value>
+		<value condition="Skin.HasSetting(slot2_show_favorites)">$LOCALIZE[10134]</value>
+		<value condition="Skin.HasSetting(slot2_show_weather)">$LOCALIZE[8]</value>
+		<value condition="Skin.HasSetting(slot2_show_system)">$LOCALIZE[31114]</value>
+		<value condition="Skin.HasSetting(slot2_show_power)">$LOCALIZE[13005]</value>
+		<value>$LOCALIZE[1]</value>
+	</variable>
+	<variable name="HomeMenuSlot3Label2Var">
+		<value condition="Skin.HasSetting(slot3_show_none)">$LOCALIZE[31111]</value>
+		<value condition="Skin.HasSetting(slot3_show_movies)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(slot3_show_tvshows)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(slot3_show_music)">$LOCALIZE[2]</value>
+		<value condition="Skin.HasSetting(slot3_show_scc)">$LOCALIZE[31949]</value>
+		<value condition="Skin.HasSetting(slot3_show_tv)">$LOCALIZE[19020]</value>
+		<value condition="Skin.HasSetting(slot3_show_radio)">$LOCALIZE[19021]</value>
+		<value condition="Skin.HasSetting(slot3_show_games)">$LOCALIZE[15016]</value>
+		<value condition="Skin.HasSetting(slot3_show_addons)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(slot3_show_pictures)">$LOCALIZE[1]</value>
+		<value condition="Skin.HasSetting(slot3_show_videos)">$LOCALIZE[3]</value>
+		<value condition="Skin.HasSetting(slot3_show_favorites)">$LOCALIZE[10134]</value>
+		<value condition="Skin.HasSetting(slot3_show_weather)">$LOCALIZE[8]</value>
+		<value condition="Skin.HasSetting(slot3_show_system)">$LOCALIZE[31114]</value>
+		<value condition="Skin.HasSetting(slot3_show_power)">$LOCALIZE[13005]</value>
+		<value>$LOCALIZE[10821]</value>
+	</variable>
+	<variable name="HomeMenuSlot4Label2Var">
+		<value condition="Skin.HasSetting(slot4_show_none)">$LOCALIZE[31111]</value>
+		<value condition="Skin.HasSetting(slot4_show_movies)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(slot4_show_tvshows)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(slot4_show_music)">$LOCALIZE[2]</value>
+		<value condition="Skin.HasSetting(slot4_show_scc)">$LOCALIZE[31949]</value>
+		<value condition="Skin.HasSetting(slot4_show_tv)">$LOCALIZE[19020]</value>
+		<value condition="Skin.HasSetting(slot4_show_radio)">$LOCALIZE[19021]</value>
+		<value condition="Skin.HasSetting(slot4_show_games)">$LOCALIZE[15016]</value>
+		<value condition="Skin.HasSetting(slot4_show_addons)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(slot4_show_pictures)">$LOCALIZE[1]</value>
+		<value condition="Skin.HasSetting(slot4_show_videos)">$LOCALIZE[3]</value>
+		<value condition="Skin.HasSetting(slot4_show_favorites)">$LOCALIZE[10134]</value>
+		<value condition="Skin.HasSetting(slot4_show_weather)">$LOCALIZE[8]</value>
+		<value condition="Skin.HasSetting(slot4_show_system)">$LOCALIZE[31114]</value>
+		<value condition="Skin.HasSetting(slot4_show_power)">$LOCALIZE[13005]</value>
+		<value>$LOCALIZE[19021]</value>
+	</variable>
+	<variable name="HomeMenuSlot5Label2Var">
+		<value condition="Skin.HasSetting(slot5_show_none)">$LOCALIZE[31111]</value>
+		<value condition="Skin.HasSetting(slot5_show_movies)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(slot5_show_tvshows)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(slot5_show_music)">$LOCALIZE[2]</value>
+		<value condition="Skin.HasSetting(slot5_show_scc)">$LOCALIZE[31949]</value>
+		<value condition="Skin.HasSetting(slot5_show_tv)">$LOCALIZE[19020]</value>
+		<value condition="Skin.HasSetting(slot5_show_radio)">$LOCALIZE[19021]</value>
+		<value condition="Skin.HasSetting(slot5_show_games)">$LOCALIZE[15016]</value>
+		<value condition="Skin.HasSetting(slot5_show_addons)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(slot5_show_pictures)">$LOCALIZE[1]</value>
+		<value condition="Skin.HasSetting(slot5_show_videos)">$LOCALIZE[3]</value>
+		<value condition="Skin.HasSetting(slot5_show_favorites)">$LOCALIZE[10134]</value>
+		<value condition="Skin.HasSetting(slot5_show_weather)">$LOCALIZE[8]</value>
+		<value condition="Skin.HasSetting(slot5_show_system)">$LOCALIZE[31114]</value>
+		<value condition="Skin.HasSetting(slot5_show_power)">$LOCALIZE[13005]</value>
+		<value>$LOCALIZE[19020]</value>
+	</variable>
+	<variable name="HomeMenuSlot6Label2Var">
+		<value condition="Skin.HasSetting(slot6_show_none)">$LOCALIZE[31111]</value>
+		<value condition="Skin.HasSetting(slot6_show_movies)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(slot6_show_tvshows)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(slot6_show_music)">$LOCALIZE[2]</value>
+		<value condition="Skin.HasSetting(slot6_show_scc)">$LOCALIZE[31949]</value>
+		<value condition="Skin.HasSetting(slot6_show_tv)">$LOCALIZE[19020]</value>
+		<value condition="Skin.HasSetting(slot6_show_radio)">$LOCALIZE[19021]</value>
+		<value condition="Skin.HasSetting(slot6_show_games)">$LOCALIZE[15016]</value>
+		<value condition="Skin.HasSetting(slot6_show_addons)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(slot6_show_pictures)">$LOCALIZE[1]</value>
+		<value condition="Skin.HasSetting(slot6_show_videos)">$LOCALIZE[3]</value>
+		<value condition="Skin.HasSetting(slot6_show_favorites)">$LOCALIZE[10134]</value>
+		<value condition="Skin.HasSetting(slot6_show_weather)">$LOCALIZE[8]</value>
+		<value condition="Skin.HasSetting(slot6_show_system)">$LOCALIZE[31114]</value>
+		<value condition="Skin.HasSetting(slot6_show_power)">$LOCALIZE[13005]</value>
+		<value>$LOCALIZE[31949]</value>
+	</variable>
+	<variable name="HomeMenuSlot7Label2Var">
+		<value condition="Skin.HasSetting(slot7_show_none)">$LOCALIZE[31111]</value>
+		<value condition="Skin.HasSetting(slot7_show_movies)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(slot7_show_tvshows)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(slot7_show_music)">$LOCALIZE[2]</value>
+		<value condition="Skin.HasSetting(slot7_show_scc)">$LOCALIZE[31949]</value>
+		<value condition="Skin.HasSetting(slot7_show_tv)">$LOCALIZE[19020]</value>
+		<value condition="Skin.HasSetting(slot7_show_radio)">$LOCALIZE[19021]</value>
+		<value condition="Skin.HasSetting(slot7_show_games)">$LOCALIZE[15016]</value>
+		<value condition="Skin.HasSetting(slot7_show_addons)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(slot7_show_pictures)">$LOCALIZE[1]</value>
+		<value condition="Skin.HasSetting(slot7_show_videos)">$LOCALIZE[3]</value>
+		<value condition="Skin.HasSetting(slot7_show_favorites)">$LOCALIZE[10134]</value>
+		<value condition="Skin.HasSetting(slot7_show_weather)">$LOCALIZE[8]</value>
+		<value condition="Skin.HasSetting(slot7_show_system)">$LOCALIZE[31114]</value>
+		<value condition="Skin.HasSetting(slot7_show_power)">$LOCALIZE[13005]</value>
+		<value>$LOCALIZE[3]</value>
+	</variable>
+	<variable name="HomeMenuSlot8Label2Var">
+		<value condition="Skin.HasSetting(slot8_show_none)">$LOCALIZE[31111]</value>
+		<value condition="Skin.HasSetting(slot8_show_movies)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(slot8_show_tvshows)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(slot8_show_music)">$LOCALIZE[2]</value>
+		<value condition="Skin.HasSetting(slot8_show_scc)">$LOCALIZE[31949]</value>
+		<value condition="Skin.HasSetting(slot8_show_tv)">$LOCALIZE[19020]</value>
+		<value condition="Skin.HasSetting(slot8_show_radio)">$LOCALIZE[19021]</value>
+		<value condition="Skin.HasSetting(slot8_show_games)">$LOCALIZE[15016]</value>
+		<value condition="Skin.HasSetting(slot8_show_addons)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(slot8_show_pictures)">$LOCALIZE[1]</value>
+		<value condition="Skin.HasSetting(slot8_show_videos)">$LOCALIZE[3]</value>
+		<value condition="Skin.HasSetting(slot8_show_favorites)">$LOCALIZE[10134]</value>
+		<value condition="Skin.HasSetting(slot8_show_weather)">$LOCALIZE[8]</value>
+		<value condition="Skin.HasSetting(slot8_show_system)">$LOCALIZE[31114]</value>
+		<value condition="Skin.HasSetting(slot8_show_power)">$LOCALIZE[13005]</value>
+		<value>$LOCALIZE[342]</value>
+	</variable>
+	<variable name="HomeMenuSlot9Label2Var">
+		<value condition="Skin.HasSetting(slot9_show_none)">$LOCALIZE[31111]</value>
+		<value condition="Skin.HasSetting(slot9_show_movies)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(slot9_show_tvshows)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(slot9_show_music)">$LOCALIZE[2]</value>
+		<value condition="Skin.HasSetting(slot9_show_scc)">$LOCALIZE[31949]</value>
+		<value condition="Skin.HasSetting(slot9_show_tv)">$LOCALIZE[19020]</value>
+		<value condition="Skin.HasSetting(slot9_show_radio)">$LOCALIZE[19021]</value>
+		<value condition="Skin.HasSetting(slot9_show_games)">$LOCALIZE[15016]</value>
+		<value condition="Skin.HasSetting(slot9_show_addons)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(slot9_show_pictures)">$LOCALIZE[1]</value>
+		<value condition="Skin.HasSetting(slot9_show_videos)">$LOCALIZE[3]</value>
+		<value condition="Skin.HasSetting(slot9_show_favorites)">$LOCALIZE[10134]</value>
+		<value condition="Skin.HasSetting(slot9_show_weather)">$LOCALIZE[8]</value>
+		<value condition="Skin.HasSetting(slot9_show_system)">$LOCALIZE[31114]</value>
+		<value condition="Skin.HasSetting(slot9_show_power)">$LOCALIZE[13005]</value>
+		<value>$LOCALIZE[20343]</value>
+	</variable>
+	<variable name="HomeMenuSlot10Label2Var">
+		<value condition="Skin.HasSetting(slot10_show_none)">$LOCALIZE[31111]</value>
+		<value condition="Skin.HasSetting(slot10_show_movies)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(slot10_show_tvshows)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(slot10_show_music)">$LOCALIZE[2]</value>
+		<value condition="Skin.HasSetting(slot10_show_scc)">$LOCALIZE[31949]</value>
+		<value condition="Skin.HasSetting(slot10_show_tv)">$LOCALIZE[19020]</value>
+		<value condition="Skin.HasSetting(slot10_show_radio)">$LOCALIZE[19021]</value>
+		<value condition="Skin.HasSetting(slot10_show_games)">$LOCALIZE[15016]</value>
+		<value condition="Skin.HasSetting(slot10_show_addons)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(slot10_show_pictures)">$LOCALIZE[1]</value>
+		<value condition="Skin.HasSetting(slot10_show_videos)">$LOCALIZE[3]</value>
+		<value condition="Skin.HasSetting(slot10_show_favorites)">$LOCALIZE[10134]</value>
+		<value condition="Skin.HasSetting(slot10_show_weather)">$LOCALIZE[8]</value>
+		<value condition="Skin.HasSetting(slot10_show_system)">$LOCALIZE[31114]</value>
+		<value condition="Skin.HasSetting(slot10_show_power)">$LOCALIZE[13005]</value>
+		<value>$LOCALIZE[2]</value>
+	</variable>
+	<variable name="HomeMenuSlot11Label2Var">
+		<value condition="Skin.HasSetting(slot11_show_none)">$LOCALIZE[31111]</value>
+		<value condition="Skin.HasSetting(slot11_show_movies)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(slot11_show_tvshows)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(slot11_show_music)">$LOCALIZE[2]</value>
+		<value condition="Skin.HasSetting(slot11_show_scc)">$LOCALIZE[31949]</value>
+		<value condition="Skin.HasSetting(slot11_show_tv)">$LOCALIZE[19020]</value>
+		<value condition="Skin.HasSetting(slot11_show_radio)">$LOCALIZE[19021]</value>
+		<value condition="Skin.HasSetting(slot11_show_games)">$LOCALIZE[15016]</value>
+		<value condition="Skin.HasSetting(slot11_show_addons)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(slot11_show_pictures)">$LOCALIZE[1]</value>
+		<value condition="Skin.HasSetting(slot11_show_videos)">$LOCALIZE[3]</value>
+		<value condition="Skin.HasSetting(slot11_show_favorites)">$LOCALIZE[10134]</value>
+		<value condition="Skin.HasSetting(slot11_show_weather)">$LOCALIZE[8]</value>
+		<value condition="Skin.HasSetting(slot11_show_system)">$LOCALIZE[31114]</value>
+		<value condition="Skin.HasSetting(slot11_show_power)">$LOCALIZE[13005]</value>
+		<value>$LOCALIZE[24001]</value>
+	</variable>
+	<variable name="HomeMenuSlot12Label2Var">
+		<value condition="Skin.HasSetting(slot12_show_none)">$LOCALIZE[31111]</value>
+		<value condition="Skin.HasSetting(slot12_show_movies)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(slot12_show_tvshows)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(slot12_show_music)">$LOCALIZE[2]</value>
+		<value condition="Skin.HasSetting(slot12_show_scc)">$LOCALIZE[31949]</value>
+		<value condition="Skin.HasSetting(slot12_show_tv)">$LOCALIZE[19020]</value>
+		<value condition="Skin.HasSetting(slot12_show_radio)">$LOCALIZE[19021]</value>
+		<value condition="Skin.HasSetting(slot12_show_games)">$LOCALIZE[15016]</value>
+		<value condition="Skin.HasSetting(slot12_show_addons)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(slot12_show_pictures)">$LOCALIZE[1]</value>
+		<value condition="Skin.HasSetting(slot12_show_videos)">$LOCALIZE[3]</value>
+		<value condition="Skin.HasSetting(slot12_show_favorites)">$LOCALIZE[10134]</value>
+		<value condition="Skin.HasSetting(slot12_show_weather)">$LOCALIZE[8]</value>
+		<value condition="Skin.HasSetting(slot12_show_system)">$LOCALIZE[31114]</value>
+		<value condition="Skin.HasSetting(slot12_show_power)">$LOCALIZE[13005]</value>
+		<value>$LOCALIZE[24992]</value>
+	</variable>
+	<variable name="HomeMenuSlot13Label2Var">
+		<value condition="Skin.HasSetting(slot13_show_none)">$LOCALIZE[31111]</value>
+		<value condition="Skin.HasSetting(slot13_show_movies)">$LOCALIZE[342]</value>
+		<value condition="Skin.HasSetting(slot13_show_tvshows)">$LOCALIZE[20343]</value>
+		<value condition="Skin.HasSetting(slot13_show_music)">$LOCALIZE[2]</value>
+		<value condition="Skin.HasSetting(slot13_show_scc)">$LOCALIZE[31949]</value>
+		<value condition="Skin.HasSetting(slot13_show_tv)">$LOCALIZE[19020]</value>
+		<value condition="Skin.HasSetting(slot13_show_radio)">$LOCALIZE[19021]</value>
+		<value condition="Skin.HasSetting(slot13_show_games)">$LOCALIZE[15016]</value>
+		<value condition="Skin.HasSetting(slot13_show_addons)">$LOCALIZE[24001]</value>
+		<value condition="Skin.HasSetting(slot13_show_pictures)">$LOCALIZE[1]</value>
+		<value condition="Skin.HasSetting(slot13_show_videos)">$LOCALIZE[3]</value>
+		<value condition="Skin.HasSetting(slot13_show_favorites)">$LOCALIZE[10134]</value>
+		<value condition="Skin.HasSetting(slot13_show_weather)">$LOCALIZE[8]</value>
+		<value condition="Skin.HasSetting(slot13_show_system)">$LOCALIZE[31114]</value>
+		<value condition="Skin.HasSetting(slot13_show_power)">$LOCALIZE[13005]</value>
+		<value>$LOCALIZE[13005]</value>
+	</variable>
+	<expression name="HasMenuSlot1">
+		Skin.HasSetting(slot1_show_movies) | Skin.HasSetting(slot1_show_tvshows) | Skin.HasSetting(slot1_show_music) | Skin.HasSetting(slot1_show_musicvideos) | Skin.HasSetting(slot1_show_tv) | Skin.HasSetting(slot1_show_radio) | Skin.HasSetting(slot1_show_games) | Skin.HasSetting(slot1_show_addons) | Skin.HasSetting(slot1_show_pictures) | Skin.HasSetting(slot1_show_videos) | Skin.HasSetting(slot1_show_favorites) | Skin.HasSetting(slot1_show_weather) | Skin.HasSetting(slot1_show_system)| Skin.HasSetting(slot1_show_power) | Skin.HasSetting(slot1_show_none)
+	</expression>	
+	<expression name="HasMenuSlot2">
+		Skin.HasSetting(slot2_show_movies) | Skin.HasSetting(slot2_show_tvshows) | Skin.HasSetting(slot2_show_music) | Skin.HasSetting(slot2_show_musicvideos) | Skin.HasSetting(slot2_show_tv) | Skin.HasSetting(slot2_show_radio) | Skin.HasSetting(slot2_show_games) | Skin.HasSetting(slot2_show_addons) | Skin.HasSetting(slot2_show_pictures) | Skin.HasSetting(slot2_show_videos) | Skin.HasSetting(slot2_show_favorites) | Skin.HasSetting(slot2_show_weather) | Skin.HasSetting(slot2_show_system)| Skin.HasSetting(slot2_show_power) | Skin.HasSetting(slot2_show_none)
+	</expression>	
+	<expression name="HasMenuSlot3">
+		Skin.HasSetting(slot3_show_movies) | Skin.HasSetting(slot3_show_tvshows) | Skin.HasSetting(slot3_show_music) | Skin.HasSetting(slot3_show_musicvideos) | Skin.HasSetting(slot3_show_tv) | Skin.HasSetting(slot3_show_radio) | Skin.HasSetting(slot3_show_games) | Skin.HasSetting(slot3_show_addons) | Skin.HasSetting(slot3_show_pictures) | Skin.HasSetting(slot3_show_videos) | Skin.HasSetting(slot3_show_favorites) | Skin.HasSetting(slot3_show_weather) | Skin.HasSetting(slot3_show_system)| Skin.HasSetting(slot3_show_power) | Skin.HasSetting(slot3_show_none)
+	</expression>	
+	<expression name="HasMenuSlot4">
+		Skin.HasSetting(slot4_show_movies) | Skin.HasSetting(slot4_show_tvshows) | Skin.HasSetting(slot4_show_music) | Skin.HasSetting(slot4_show_musicvideos) | Skin.HasSetting(slot4_show_tv) | Skin.HasSetting(slot4_show_radio) | Skin.HasSetting(slot4_show_games) | Skin.HasSetting(slot4_show_addons) | Skin.HasSetting(slot4_show_pictures) | Skin.HasSetting(slot4_show_videos) | Skin.HasSetting(slot4_show_favorites) | Skin.HasSetting(slot4_show_weather) | Skin.HasSetting(slot4_show_system)| Skin.HasSetting(slot4_show_power) | Skin.HasSetting(slot4_show_none)
+	</expression>	
+	<expression name="HasMenuSlot5">
+		Skin.HasSetting(slot5_show_movies) | Skin.HasSetting(slot5_show_tvshows) | Skin.HasSetting(slot5_show_music) | Skin.HasSetting(slot5_show_musicvideos) | Skin.HasSetting(slot5_show_tv) | Skin.HasSetting(slot5_show_radio) | Skin.HasSetting(slot5_show_games) | Skin.HasSetting(slot5_show_addons) | Skin.HasSetting(slot5_show_pictures) | Skin.HasSetting(slot5_show_videos) | Skin.HasSetting(slot5_show_favorites) | Skin.HasSetting(slot5_show_weather) | Skin.HasSetting(slot5_show_system)| Skin.HasSetting(slot5_show_power) | Skin.HasSetting(slot5_show_none)
+	</expression>	
+	<expression name="HasMenuSlot6">
+		Skin.HasSetting(slot6_show_movies) | Skin.HasSetting(slot6_show_tvshows) | Skin.HasSetting(slot6_show_music) | Skin.HasSetting(slot6_show_musicvideos) | Skin.HasSetting(slot6_show_tv) | Skin.HasSetting(slot6_show_radio) | Skin.HasSetting(slot6_show_games) | Skin.HasSetting(slot6_show_addons) | Skin.HasSetting(slot6_show_pictures) | Skin.HasSetting(slot6_show_videos) | Skin.HasSetting(slot6_show_favorites) | Skin.HasSetting(slot6_show_weather) | Skin.HasSetting(slot6_show_system)| Skin.HasSetting(slot6_show_power) | Skin.HasSetting(slot6_show_none)
+	</expression>	
+	<expression name="HasMenuSlot7">
+		Skin.HasSetting(slot7_show_movies) | Skin.HasSetting(slot7_show_tvshows) | Skin.HasSetting(slot7_show_music) | Skin.HasSetting(slot7_show_musicvideos) | Skin.HasSetting(slot7_show_tv) | Skin.HasSetting(slot7_show_radio) | Skin.HasSetting(slot7_show_games) | Skin.HasSetting(slot7_show_addons) | Skin.HasSetting(slot7_show_pictures) | Skin.HasSetting(slot7_show_videos) | Skin.HasSetting(slot7_show_favorites) | Skin.HasSetting(slot7_show_weather) | Skin.HasSetting(slot7_show_system)| Skin.HasSetting(slot7_show_power) | Skin.HasSetting(slot7_show_none)
+	</expression>	
+	<expression name="HasMenuSlot8">
+		Skin.HasSetting(slot8_show_movies) | Skin.HasSetting(slot8_show_tvshows) | Skin.HasSetting(slot8_show_music) | Skin.HasSetting(slot8_show_musicvideos) | Skin.HasSetting(slot8_show_tv) | Skin.HasSetting(slot8_show_radio) | Skin.HasSetting(slot8_show_games) | Skin.HasSetting(slot8_show_addons) | Skin.HasSetting(slot8_show_pictures) | Skin.HasSetting(slot8_show_videos) | Skin.HasSetting(slot8_show_favorites) | Skin.HasSetting(slot8_show_weather) | Skin.HasSetting(slot8_show_system)| Skin.HasSetting(slot8_show_power) | Skin.HasSetting(slot8_show_none)
+	</expression>	
+	<expression name="HasMenuSlot9">
+		Skin.HasSetting(slot9_show_movies) | Skin.HasSetting(slot9_show_tvshows) | Skin.HasSetting(slot9_show_music) | Skin.HasSetting(slot9_show_musicvideos) | Skin.HasSetting(slot9_show_tv) | Skin.HasSetting(slot9_show_radio) | Skin.HasSetting(slot9_show_games) | Skin.HasSetting(slot9_show_addons) | Skin.HasSetting(slot9_show_pictures) | Skin.HasSetting(slot9_show_videos) | Skin.HasSetting(slot9_show_favorites) | Skin.HasSetting(slot9_show_weather) | Skin.HasSetting(slot9_show_system)| Skin.HasSetting(slot9_show_power) | Skin.HasSetting(slot9_show_none)
+	</expression>	
+	<expression name="HasMenuSlot10">
+		Skin.HasSetting(slot10_show_movies) | Skin.HasSetting(slot10_show_tvshows) | Skin.HasSetting(slot10_show_music) | Skin.HasSetting(slot10_show_musicvideos) | Skin.HasSetting(slot10_show_tv) | Skin.HasSetting(slot10_show_radio) | Skin.HasSetting(slot10_show_games) | Skin.HasSetting(slot10_show_addons) | Skin.HasSetting(slot10_show_pictures) | Skin.HasSetting(slot10_show_videos) | Skin.HasSetting(slot10_show_favorites) | Skin.HasSetting(slot10_show_weather) | Skin.HasSetting(slot10_show_system)| Skin.HasSetting(slot10_show_power) | Skin.HasSetting(slot10_show_none)
+	</expression>	
+	<expression name="HasMenuSlot11">
+		Skin.HasSetting(slot11_show_movies) | Skin.HasSetting(slot11_show_tvshows) | Skin.HasSetting(slot11_show_music) | Skin.HasSetting(slot11_show_musicvideos) | Skin.HasSetting(slot11_show_tv) | Skin.HasSetting(slot11_show_radio) | Skin.HasSetting(slot11_show_games) | Skin.HasSetting(slot11_show_addons) | Skin.HasSetting(slot11_show_pictures) | Skin.HasSetting(slot11_show_videos) | Skin.HasSetting(slot11_show_favorites) | Skin.HasSetting(slot11_show_weather) | Skin.HasSetting(slot11_show_system)| Skin.HasSetting(slot11_show_power) | Skin.HasSetting(slot11_show_none)
+	</expression>	
+	<expression name="HasMenuSlot12">
+		Skin.HasSetting(slot12_show_movies) | Skin.HasSetting(slot12_show_tvshows) | Skin.HasSetting(slot12_show_music) | Skin.HasSetting(slot12_show_musicvideos) | Skin.HasSetting(slot12_show_tv) | Skin.HasSetting(slot12_show_radio) | Skin.HasSetting(slot12_show_games) | Skin.HasSetting(slot12_show_addons) | Skin.HasSetting(slot12_show_pictures) | Skin.HasSetting(slot12_show_videos) | Skin.HasSetting(slot12_show_favorites) | Skin.HasSetting(slot12_show_weather) | Skin.HasSetting(slot12_show_system)| Skin.HasSetting(slot12_show_power) | Skin.HasSetting(slot12_show_none)
+	</expression>
+	<expression name="HasMenuSlot13">
+		Skin.HasSetting(slot13_show_movies) | Skin.HasSetting(slot13_show_tvshows) | Skin.HasSetting(slot13_show_music) | Skin.HasSetting(slot13_show_musicvideos) | Skin.HasSetting(slot13_show_tv) | Skin.HasSetting(slot13_show_radio) | Skin.HasSetting(slot13_show_games) | Skin.HasSetting(slot13_show_addons) | Skin.HasSetting(slot13_show_pictures) | Skin.HasSetting(slot13_show_videos) | Skin.HasSetting(slot13_show_favorites) | Skin.HasSetting(slot13_show_weather) | Skin.HasSetting(slot13_show_system) | Skin.HasSetting(slot13_show_power) | Skin.HasSetting(slot13_show_none)
+	</expression>
+</includes>
