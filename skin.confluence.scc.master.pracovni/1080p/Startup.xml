@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<window>
-	<onload condition="!Skin.HasSetting(HomeMenuOnSplash)">ReplaceWindow($INFO[System.StartupWindow])</onload>
-	<onload condition="Skin.HasSetting(HomeMenuOnSplash)">AlarmClock(Skin,ReplaceWindow($INFO[System.StartupWindow]),00:10,silent)</onload>>
-
-	<controls>
-		<include>Splash</include> <!-- mod -->
-	</controls>
-</window>
