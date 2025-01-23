@@ -367,6 +367,23 @@
   </extension>
 </addon>
 
+<addon id="script.iperf3.tool" name="iPerf3 Bandwidth Tool" version="1.0.0" provider-name="jkmh">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+    </requires>
+    <extension point="xbmc.python.script" library="default.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Měření rychlosti pomocí iPerf3</summary>
+        <description>Addon pro spuštění iPerf3. Funkční jen v prostředí Android a Linux.</description>
+        <platform>android linux</platform>
+		<assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>
+
 <addon id="script.kitchen.timer" name="Minutka" version="0.0.1" provider-name="jkmh">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
@@ -573,6 +590,62 @@ Ověřené skiny (default):[B]Confluence, Confluence SCC Omega, Estuary (Hardo) 
       <icon>icon.png</icon>
     </assets>
   </extension>
+</addon>
+
+<addon id="service.getinfo" name="Get Info" version="0.1.0" provider-name="JiRo">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+	</requires>
+	<extension point="xbmc.service" library="service.py">
+		<provides>service</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="cs_CZ">Get Stream Info</summary>
+		<description lang="cs_CZ">Service uloží do specfifických properties ve window=10000 (HOME) informace o adrese přehrávaného streamu.[CR]Současná verze ukládá:[CR]Adresu přehrávaného streamu do property 'played_stream'[CR]Parsovaný název serveru do property 'downloaded_server'.
+</description>
+        <language>cs</language>
+		<platform>all</platform>
+        <license>GPL 2.0</license>
+		<forum></forum>
+		<website></website>
+		<email></email>
+		<source></source>
+		<assets>
+			<icon></icon>
+		</assets>
+		<news>
+2024-01-10 [0.1.0]
+- initial version
+		</news>
+	</extension>
+</addon>
+
+<addon id="service.getstreaminfo" name="Get Stream Info" version="0.1.0" provider-name="JiRo">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+	</requires>
+	<extension point="xbmc.service" library="service.py">
+		<provides>service</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="cs_CZ">Get Stream Info</summary>
+		<description lang="cs_CZ">Service uloží do specfifických properties ve window=10000 (HOME) informace o adrese přehrávaného streamu.[CR]Současná verze ukládá:[CR]Adresu přehrávaného streamu do property 'played_stream'[CR]Parsovaný název serveru do property 'downloaded_server'.
+</description>
+        <language>cs</language>
+		<platform>all</platform>
+        <license>GPL 2.0</license>
+		<forum></forum>
+		<website></website>
+		<email></email>
+		<source></source>
+		<assets>
+			<icon></icon>
+		</assets>
+		<news>
+2024-01-10 [0.1.0]
+- initial version
+		</news>
+	</extension>
 </addon>
 
 <addon id="service.holidays" name="Holidays" version="1.0.5" provider-name="jkmh">
