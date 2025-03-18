@@ -6,8 +6,8 @@
     <extension point="kodi.context.item">
         <menu id="kodi.core.main">
             <item library="addon.py">
-                <label>Download video</label>
-                <visible>String.IsEqual(ListItem.dbtype,episode)|String.IsEqual(ListItem.dbtype,movie)|Container.Content(movies)|Container.Content(episodes)</visible>
+                <label>[COLOR lightskyblue]Download video[/COLOR]</label>
+                <visible>String.IsEqual(ListItem.dbtype,episode)|String.IsEqual(ListItem.dbtype,movie)|Container.Content(movies)|Container.Content(episodes)|Pvr.HasTVChannels</visible>
             </item>
         </menu>
     </extension>

@@ -23,40 +23,27 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.noe" name="Noe TV" version="1.0.1" provider-name="jkmh">
-    <requires>
-        <import addon="xbmc.python" version="3.0.0"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
+<addon id="plugin.video.idnes.tv" name="iDnes TV" version="1.1.2.1" provider-name="jkmh">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.selenium"/>
+		<import addon="script.module.requests"/>
+		<import addon="script.module.beautifulsoup4"/>
+		<import addon="script.module.routing"/>
+		<import addon="script.module.urllib3"/>
+		<import addon="script.module.pil"/>
+	</requires>
+	<extension library="default.py" point="xbmc.python.pluginsource">
+		<provides>video</provides>
+	</extension>
 	<extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">TV Noe and Noe+</summary>
-        <summary lang="cs_CZ">TV Noe a Noe+</summary>
-        <description lang="cs_CZ">Jednoduchý doplněk pro sledování TV Noe a TV Noe+</description>
-        <platform>all</platform>
-        <assets>
-            <icon>icon.png</icon>
-        </assets>
-    </extension>
-</addon>
-
-<addon id="plugin.video.spiritual" name="Duchovní TV" version="1.0.0" provider-name="jkmh">
-    <requires>
-        <import addon="xbmc.python" version="3.0.0"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-	<extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">TV Noe, Noe+, TV Lux</summary>
-        <summary lang="cs_CZ">TV Noe, Noe+ a TV Lux</summary>
-        <description lang="cs_CZ">Jednoduchý doplněk pro sledování TV Noe, TV Noe+ a TV Lux</description>
-        <platform>all</platform>
-        <assets>
-            <icon>icon.png</icon>
-        </assets>
-    </extension>
+		<summary lang="cs_CZ">iDnes.cz</summary>
+		<description lang="cs_CZ">Doplněk umožňuje sledování streamů z webu tv.idnes.cz.</description>
+		<platform>all</platform>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
 </addon>
 
 <addon id="script.advancedsettings.generator" name="Advanced Settings Generator" version="1.2.1" provider-name="jkmh">
@@ -101,8 +88,8 @@
     <extension point="kodi.context.item">
         <menu id="kodi.core.main">
             <item library="addon.py">
-                <label>Download video</label>
-                <visible>String.IsEqual(ListItem.dbtype,episode)|String.IsEqual(ListItem.dbtype,movie)|Container.Content(movies)|Container.Content(episodes)</visible>
+                <label>[COLOR lightskyblue]Download video[/COLOR]</label>
+                <visible>String.IsEqual(ListItem.dbtype,episode)|String.IsEqual(ListItem.dbtype,movie)|Container.Content(movies)|Container.Content(episodes)|Pvr.HasTVChannels</visible>
             </item>
         </menu>
     </extension>
@@ -403,6 +390,25 @@
 	</extension>
 </addon>
 
+<addon id="script.module.selenium"
+		name="Selenium and Web Drivers"
+		version="3.12.4.006"
+		provider-name="YDRAGON">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary>Selenium automates browsers.</summary>
+		<description>Selenium has the support of some of the largest browser vendors who have taken (or are taking) steps to make Selenium a native part of their browser. It is also the core technology in countless other browser automation tools, APIs and frameworks.</description>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <platform>all</platform>
+        <email>nkvoronov@gmail.com</email>
+		<source>https://github.com/nkvoronov/script.module.selenium.git</source>
+	</extension>
+</addon>
+
 <addon id="playlist.epg.generator.v2" name="Playlist EPG Generator" version="1.0.0" provider-name="jkmh">
 	<requires>
         <import addon="xbmc.python" version="3.0.0" />
@@ -540,6 +546,20 @@ Ověřené skiny (default):[B]Confluence, Confluence SCC Omega, Estuary (Hardo) 
       <icon>icon.png</icon>
     </assets>
   </extension>
+</addon>
+
+<addon id="script.ws.download.bandwith" version="1.0.0" name="Webshare Download Bandwith" provider-name="jkmh">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.script" library="main.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="cz">edit</summary>
+        <description lang="cz">Měření rychlosti stahování ze serverů Webshare</description>
+        <platform>android linux</platform>
+    </extension>
 </addon>
 
 <addon id="service.autoexec.journalctl" name="Autoexec Journalctl" version="1.0.0" provider-name="jkmh">
