@@ -14,8 +14,8 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="cs_CZ">iDnes.cz</summary>
-		<description lang="cs_CZ">Doplněk umožňuje sledování streamů z webu tv.idnes.cz.</description>
-		<platform>all</platform>
+		<description lang="cs_CZ">Doplněk umožňuje sledování pořadů z webu tv.idnes.cz.</description>
+		<platform>linux windows</platform>
 		<assets>
 			<icon>icon.png</icon>
 		</assets>
