@@ -2,3 +2,7 @@
 1.1.0 - přidání funkcí
 1.1.1 - vyčištění kódu
 1.1.2 - automatická aktualizace chromedriveru
+1.2.0 - odstraněn chromedriver a selenium, změna koncepce
+1.2.1 - odstraněn chromedriver a selenium, změna koncepce - vyčištění
+1.2.2 - oprava chyby name 'encoded_full_url' is not defined
+1.2.3 - oprava chyby Error Contents: 'datetime' v "iDnes>TV"
