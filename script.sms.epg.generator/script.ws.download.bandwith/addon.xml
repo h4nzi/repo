@@ -1,0 +1,14 @@
+<addon id="script.ws.download.bandwith" version="1.0.0" name="Webshare Download Bandwith" provider-name="jkmh">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.script" library="main.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="cz">edit</summary>
+        <description lang="cz">Měření rychlosti stahování ze serverů Webshare.[CR]Script stahuje současně testovací soubor ze všech serverů</description>
+        <platform>android linux</platform>
+    </extension>
+</addon>
+

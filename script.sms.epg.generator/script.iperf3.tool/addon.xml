@@ -1,0 +1,16 @@
+<addon id="script.iperf3.tool" name="iPerf3 Bandwidth Tool" version="1.0.0" provider-name="jkmh">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+    </requires>
+    <extension point="xbmc.python.script" library="default.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Měření rychlosti pomocí iPerf3</summary>
+        <description>Addon pro spuštění iPerf3. Funkční jen v prostředí Android a Linux.</description>
+        <platform>android linux</platform>
+		<assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>

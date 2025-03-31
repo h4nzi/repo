@@ -1,0 +1,29 @@
+v1.0.1 2024-12-11
+- journal function deleted
+
+v1.0.0 2024-12-11
+- first public version
+- alpha version
+
+Skins support added and/or verified:
+- explicit: Estuary, Estuary Easy
+- default: Confluence, Confluence SCC Omega, Estuary (Hardo) SCC Omega
+
+v0.2.0 2023-04-19
+- first pre-public version
+- pre-Alpha version
+Limitations and assumptions:
+- a number of planned features are not released. See To-Do in theme Speed Meter at forum XBMC-Kodi.cz.
+- CoreELEC 20 only (other *ELEC and Linux based systems no guarantee)
+- 1080 and greater skins (the possibility of adaptation to 720 skins exists, but I still have to pay attention to it)
+- Estuary and Estuary based skins only (other skins with possible font size issues)
+- eth0 interface only
+- addon uses system applications ifconfig, grep a sed
+
+v0.1.1 2022-07-05
+- add other scales (1.0, 0.5)
+
+0.1.0 2022-03-26
+- initial version
+- very limited funcionality
+- for test purposes only
