@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.speedmeter" name="Speed Meter" version="1.0.1" provider-name="JiRo">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.requests" version="2.22.0"/>
+	</requires>
+	<extension point="xbmc.python.script" library="script.py">
+		<provides>executable</provides>
+	</extension>
+	<extension  point="xbmc.service" library="service.py" />
+    <extension point="xbmc.python.module" library="resources/lib/"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="cs_CZ">Doplněk pro on-line měření rychlosti komunikace na síťovém rozhraní systému, na kterém běží Kodi.</summary>
+		<description lang="cs_CZ">Aplikace je momentálně v Alpha verzi a do konečné podoby je ještě dlouhá cesta.
+Tato verze je tedy určena pro nedočkavé zájemce o tento doplněk a je třeba ji chápat jako experimentální.
+Je určena pouze pro LibreELEC a CoreELEC verze 20 a vyšší a pravděpodobně i pro systémy Linux (neověřeno).
+V současné chvíli umí doplněk monitorovat pouze komunikaci na rozhraní eth0. Využívá pro to systémové aplikace ifconfig, grep a sed.
+
+Explicitně podporované skiny: [B]Estuary, Estuary Easy[/B]
+Ověřené skiny (default):[B]Confluence, Confluence SCC Omega, Estuary (Hardo) SCC Omega[/B]
+		</description>
+        <disclaimer  lang="cs_CZ">Tato verze je experimentální.[CR]Její použití v produktivních prostředích Kodi jen na vlastní nebezpečí.</disclaimer>
+        <language>cs</language>
+		<platform>linux</platform>
+        <license>GPL 2.0</license>
+		<forum>https://www.xbmc-kodi.cz/prispevek-speed-meter</forum>
+		<website></website>
+		<email></email>
+		<source></source>
+		<assets>
+			<icon>resources/icon.png</icon>
+            <screenshot>resources/screenshot01.jpg</screenshot>
+            <screenshot>resources/screenshot02.jpg</screenshot>
+            <screenshot>resources/screenshot03.jpg</screenshot>
+            <screenshot>resources/screenshot04.jpg</screenshot>
+            <screenshot>resources/screenshot05.jpg</screenshot>
+		</assets>
+		<news>v1.0.1 2024-12-11
+- journal functions deleted
+		</news>
+	</extension>
+</addon>
