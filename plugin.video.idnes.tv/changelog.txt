@@ -9,3 +9,4 @@
 1.2.4 - drobné opravy
 1.3.0 - doplněno o Kino iDnes
 1.3.1 - rozděleno na TV a Kino
+1.3.2 - vyčištění kódu
