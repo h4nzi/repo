@@ -23,6 +23,28 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.archivsledovanitv" version="1.23.4" name="Archiv SledovaniTV" provider-name="Sároš, mod jkmh">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.requests" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="cs">Archiv SledovaniTV</summary>
+        <summary lang="en">Archiv SledovaniTV</summary>
+        <summary lang="sk">Archív SledovanieTV</summary>
+        <description lang="cs">Až 7 dní zpětného sledování televizních pořadů ze serveru SledováníTV.cz (placená služba)</description>
+        <description lang="en">Up to 7 days of watching TV programs back from the SledovaniTV.cz server (paid service)</description>
+        <description lang="sk">Až 7 dní spätného sledovania televíznych programov zo servera SledovanieTV.sk (platená služba)</description>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>
+
 <addon id="plugin.video.idnes" name="TV iDnes" version="1.1.2" provider-name="jkmh">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
@@ -764,7 +786,7 @@
 	</extension>
 </addon>
 
-<addon id="script.skip.ads" name="Skip Ads" version="1.0.0" provider-name="jkmh">
+<addon id="script.skip.ads" name="Skip Ads" version="1.0.1" provider-name="jkmh">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
 	<import addon="xbmc.addon" version="14.0.0"/>
@@ -801,7 +823,7 @@
 	</extension>
 </addon>
 
-<addon id="script.speedmeter" name="Speed Meter" version="1.0.1" provider-name="JiRo">
+<addon id="script.speedmeter" name="Speed Meter" version="1.0.2" provider-name="JiRo">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests" version="2.22.0"/>
@@ -996,6 +1018,30 @@ Ověřené skiny (default):[B]Confluence, Confluence SCC Omega, Estuary (Hardo) 
       <icon>icon.png</icon>
     </assets>
   </extension>
+</addon>
+
+<addon id="service.stv.web.server" name="IPTV STV Server" version="1.0.0" provider-name="Sároš">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" />
+        <import addon="script.module.pycryptodome" />
+        <import addon="script.module.bottle" />
+        <import addon="script.module.routing" />
+    </requires>
+    <extension point="xbmc.service" library="service.py">
+    </extension>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="cs_CS">IPTV Web Server</summary>
+        <description lang="cs_CS">Tento doplněk vám pomocí webového serveru zpřístupní cestu k vaším streamům v rámci lokální sítě.</description>
+        <news>v1.0.0 (24.3.2023)
+        </news>
+        <assets>
+			<icon>icon.png</icon>
+        </assets>
+    </extension>
 </addon>
 
 <addon id="service.temperature" name="Teploměr" version="1.0.0" provider-name="jkmh">

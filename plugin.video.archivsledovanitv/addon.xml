@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.archivsledovanitv" version="1.23.4" name="Archiv SledovaniTV" provider-name="Sároš, mod jkmh">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.requests" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="cs">Archiv SledovaniTV</summary>
+        <summary lang="en">Archiv SledovaniTV</summary>
+        <summary lang="sk">Archív SledovanieTV</summary>
+        <description lang="cs">Až 7 dní zpětného sledování televizních pořadů ze serveru SledováníTV.cz (placená služba)</description>
+        <description lang="en">Up to 7 days of watching TV programs back from the SledovaniTV.cz server (paid service)</description>
+        <description lang="sk">Až 7 dní spätného sledovania televíznych programov zo servera SledovanieTV.sk (platená služba)</description>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>

@@ -1,3 +1,6 @@
+v1.0.1 2024-04-05
+- přidána detekce skinu
+
 v1.0.1 2024-12-11
 - journal function deleted
 
