@@ -1,3 +1,6 @@
+[B]5.0.9.omega-3[/B]
+- Oprava zobrazení Shopping
+
 [B]5.0.9.omega-2[/B]
 - Do Extended menu přidána položka Speedmeter
 
