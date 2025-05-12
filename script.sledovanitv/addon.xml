@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<addon id="script.sledovanitv" version="1.1.1" name="Script SledovaniTV" provider-name="jkmh">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.requests" />
+    </requires>
+	<extension point="xbmc.python.script" library="main.py"/>
+	<extension point="xbmc.service" library="service.py"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="cs">Script SledovaniTV</summary>
+        <summary lang="en">Script SledovaniTV</summary>
+        <description lang="cs">Script pro stažení a tvorbu playlistu a EPG pro IPTV Simple Client</description>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>

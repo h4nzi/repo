@@ -45,6 +45,80 @@
     </extension>
 </addon>
 
+<addon id="plugin.video.fastshare" version="1.0.8" name="FASTSHARE" provider-name="info@fastshare.cz, revize jkmh">
+  <language></language>
+<requires>
+  <import addon="xbmc.python" version="3.0.0"/>
+  <!--<import addon="plugin.program.autocompletion" version="2020.0.0"/>
+  <import addon="script.module.autocompletion" version="2020.0.0"/>-->
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+  <summary lang="en_GB">FASTSHARE EN</summary>
+  <summary lang="cs_CZ">FASTSHARE CZ</summary>
+  <summary lang="pl_PL">FASTSHARE PL</summary>
+  <summary lang="sk_SK">FASTSHARE SK</summary>
+  <platform>all</platform>
+  <description lang="en_GB">Fastshare audio/video plugin for KODI.</description>
+  <disclaimer lang="en_GB">Free to use</disclaimer>
+  <description lang="cs_CZ">Fastshare audio/video rozšíření pro KODI.</description>
+  <disclaimer lang="cs_CZ">Zdarma</disclaimer>
+  <description lang="pl_PL">PL Fastshare rozszerzenie audio / wideo dla KODI.</description>
+  <disclaimer lang="pl_PL">PL za darmo</disclaimer>
+  <description lang="sk_SK">SK Fastshare audio/video rozšírenie pre KODI.</description>
+  <disclaimer lang="sk_SK">SK Zdarma</disclaimer>
+  <assets>
+    <icon>icon.png</icon>
+  </assets>
+  <news>Verze 1.0.8 - Python 3 compatible, SK language added</news>
+</extension>
+</addon>
+
+<addon id="plugin.video.filmfinder"
+       name="Film Finder"
+       version="1.0.0"
+       provider-name="TvojeJmeno">
+    <requires>
+        <import addon="script.module.requests" version="2.18.4"/>
+        <import addon="script.module.beautifulsoup4" version="4.5.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Film Finder</summary>
+        <description lang="cs">Doplnit</description>
+        <disclaimer lang="cz">Doplnit.</disclaimer>
+        <platform>all</platform>
+        <forum>https://www.xbmc-kodi.cz/prispevek-sktonline</forum>
+        <source>https://github.com/cache-sk/SkTonline</source>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.hellspy" name="Hellspy.cz" version="1.0.0" provider-name="jkmh">
+	<requires>
+	  <import addon="xbmc.python" version="3.0.1"/>
+	  <import addon="script.module.requests"/>
+	  <import addon="script.module.urllib3" version="1.26.9"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+	  <provides>video</provides>
+	</extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="cs">Vyhledávání videí na serveru Hellspy.cz</summary>
+        <description lang="cs">Hledej a přehrávej videa z Hellspy.cz Není nutný účet.[CR][CR]Tímto díky @JanoHD za nápad.</description>
+        <platform>all</platform>
+    	<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
 <addon id="plugin.video.idnes" name="TV iDnes" version="1.1.2" provider-name="jkmh">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
@@ -110,7 +184,52 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.spiritual" name="Duchovní TV" version="1.0.0" provider-name="jkmh">
+<addon id="plugin.video.sktonline" version="1.1.2" name="SkTonline" provider-name="cache-sk">
+    <requires>
+        <import addon="script.module.requests" version="2.18.4"/>
+        <import addon="script.module.beautifulsoup4" version="4.5.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">SkTonline</summary>
+        <description lang="en">Simulation of online.sktorrent.eu browser</description>
+        <description lang="sk">Simulácia prehliadača stránky online.sktorrent.eu</description>
+        <description lang="cs">Simulace prohlížeče stránky online.sktorrent.eu</description>
+        <disclaimer lang="en">The plugin does not provide any content, it is only a simulation of the browser of a publicly available web site. I am not responsible for the content provided by this site.</disclaimer>
+        <disclaimer lang="sk">Plugin neposkytuje žiaden obsah, je to len simulácia prehliadača verejne dostupnej web stránky. Nie som zodpovedný za obsah, ktorý táto stránka poskytuje.</disclaimer>
+        <disclaimer lang="cz">Plugin neposkytuje žádný obsah, je to jen simulace prohlížeče veřejně dostupné web stránky. Nejsem zodpovědný za obsah, který tato stránka poskytuje.</disclaimer>
+        <platform>all</platform>
+        <forum>https://www.xbmc-kodi.cz/prispevek-sktonline</forum>
+        <source>https://github.com/cache-sk/SkTonline</source>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <news>
+[B]1.1.2[/B]
+- prihlasenie vyzaduje recaptchu, takze je znefunkcnene
+[B]1.1.1[/B]
+- prototyp prihlasenia pre CZ
+[B]1.1.0[/B]
+- upravenie vyberu streamu cez kontextove menu a nie submenu, pridanie naposledy pozeranych, pridanie historie vyhladavania
+[B]1.0.5[/B]
+- i am an idiot fix
+[B]1.0.4[/B]
+- matrix fix
+[B]1.0.3[/B]
+- kompatibilita s Kodi 19 Matrix Alpha
+[B]1.0.2[/B]
+- zviditelnenie v Kodi 19 Matrix Alpha
+[B]1.0.1[/B]
+- disclaimer
+[B]1.0.0[/B]
+- first release
+        </news>
+    </extension>
+</addon>
+
+<addon id="plugin.video.spiritual" name="Duchovní TV" version="1.0.1" provider-name="jkmh">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
     </requires>
@@ -125,6 +244,85 @@
         <assets>
             <icon>icon.png</icon>
         </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.tvlux.sk"
+version="1.4.1"
+name="Televízia LUX"
+provider-name="VincoNafta">
+<requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.beautifulsoup4" version="4.6.2"/>
+    <import addon="script.module.urllib3" version="1.26.9"/>
+    <import addon="script.module.dateutil" version="2.8.1"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+  <summary lang="en">Archive tv lux</summary>
+  <summary lang="sk">Archív televízie lux</summary>
+  <description lang="sk_SK">Sledujte relácie z TV LUX už piamo v kodi</description>
+  <disclaimer lang="sk_SK">Všetky videá su k dispozicii z webovej stránky
+  doplnok je len simuláciou prehliadača
+  </disclaimer>
+  <disclaimer lang="en_GB">All videos are free from oficial website
+    Addon is only webbrowser simulation</disclaimer>
+  <assets>
+    <icon>icon.png</icon>
+  </assets>
+</extension>
+</addon>
+
+<addon id="plugin.video.yawsp" name="YAWsP" version="0.2.0" provider-name="cache-sk">
+    <requires>
+        <!--import addon="xbmc.python" version="2.19.0"/-->
+        <import addon="script.module.requests" version="2.18.4"/>
+        <import addon="script.module.unidecode" version="0.4.16"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Yet Another Webshare Plugin</summary>
+        <disclaimer lang="en_GB">The plugin does not provide any content, it is only a simulation of the browser of a publicly available web site. I am not responsible for the content provided by this site.</disclaimer>
+        <disclaimer lang="sk_SK">Plugin neposkytuje žiaden obsah, je to len simulácia prehliadača verejne dostupnej web stránky. Nie som zodpovedný za obsah, ktorý táto stránka poskytuje.</disclaimer>
+        <disclaimer lang="cs_CZ">Plugin neposkytuje žádný obsah, je to jen simulace prohlížeče veřejně dostupné web stránky. Nejsem zodpovědný za obsah, který tato stránka poskytuje.</disclaimer>
+        <platform>all</platform>
+        <license>AGPL 3.0</license>
+        <forum>https://www.xbmc-kodi.cz/prispevek-yet-another-webshare-plugin</forum>
+        <source>https://github.com/cache-sk/plugin.video.yawsp</source>
+        <assets>
+            <icon>resources/icon.png</icon>
+        </assets>
+        <news>
+[B]0.2.0[/B]
+- nexus compatibility
+[B]0.1.9[/B]
+- matrix compatibility pt3
+[B]0.1.8[/B]
+- matrix compatibility pt2
+[B]0.1.7[/B]
+- matrix compatibility pt1
+[B]0.1.6[/B]
+- experimenty s uuid/headermi aby neukladalo historiu viac krat - nepomohlo..
+- uuid je generovane
+[B]0.1.5[/B]
+- fixed stahovanie, aby slo aj na sambu
+[B]0.1.4[/B]
+- experimental
+[B]0.1.3[/B]
+- experimental
+[B]0.1.2[/B]
+- pridane stahovanie
+[B]0.1.1[/B]
+- pridane v menu hladania aj vsetky najnovsie a najvacsie (pozor, zobrazuje to aj adult obsah)
+[B]0.1.0[/B]
+- prvy verejny release
+- TODO stahovanie
+- TODO hladanie pomocou TMDB
+        </news>
     </extension>
 </addon>
 
@@ -448,7 +646,7 @@
     </extension>
 </addon>
 
-<addon id="script.contextmenu" version="0.1.16" name="Context Menu" provider-name="JiRo">
+<addon id="script.contextmenu" version="0.1.20" name="Context Menu" provider-name="JiRo">
     <requires>
         <import addon="xbmc.python" version="3.0.1" />
     </requires>
@@ -472,22 +670,22 @@
 				<label>$INFO[Window(Home).Property(contextmenu_item4_name)]</label>
 				<visible>Addon.SettingBool(script.contextmenu,item4_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item4_position),6)</visible>
 			</item>
-			<item library="resourcestool.py" args="plugin.video.stream-cinema-2-release,auto_select_stream,true" >
-				<label>30101</label>
-				<visible>!Addon.SettingBool(plugin.video.stream-cinema-2-release,auto_select_stream) + System.AddonIsEnabled(plugin.video.stream-cinema-2-release) + [String.IsEqual(Container.PluginName,plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,plugin://plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,movie_library_folder)) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,tvshow_library_folder))] + Addon.SettingBool(script.contextmenu,enable_select_stream)</visible>
-			</item>
-			<item library="tool.py" args="plugin.video.stream-cinema-2-release,auto_select_stream,false" >
-				<label>30102</label>
-				<visible>Addon.SettingBool(plugin.video.stream-cinema-2-release,auto_select_stream) + System.AddonIsEnabled(plugin.video.stream-cinema-2-release) + [String.IsEqual(Container.PluginName,plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,plugin://plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,movie_library_folder)) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,tvshow_library_folder))] + Addon.SettingBool(script.contextmenu,enable_select_stream)</visible>
-			</item>
-			<item library="tool.py" args="plugin.video.stream-cinema-2-release,auto_select_stream.download,true" >
-				<label>30111</label>
-				<visible>!Addon.SettingBool(plugin.video.stream-cinema-2-release,auto_select_stream.download) + System.AddonIsEnabled(plugin.video.stream-cinema-2-release) + [String.IsEqual(Container.PluginName,plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,plugin://plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,movie_library_folder)) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,tvshow_library_folder))] + Addon.SettingBool(script.contextmenu,enable_select_stream.download)</visible>
-			</item>
-			<item library="tool.py" args="plugin.video.stream-cinema-2-release,auto_select_stream.download,false" >
-				<label>30112</label>
-				<visible>Addon.SettingBool(plugin.video.stream-cinema-2-release,auto_select_stream.download) + System.AddonIsEnabled(plugin.video.stream-cinema-2-release) + [String.IsEqual(Container.PluginName,plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,plugin://plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,movie_library_folder)) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,tvshow_library_folder))] + Addon.SettingBool(script.contextmenu,enable_select_stream.download)</visible>
-			</item>
+			<!-- <item library="resourcestool.py" args="plugin.video.stream-cinema-2-release,auto_select_stream,true" > -->
+				<!-- <label>30101</label> -->
+				<!-- <visible>!Addon.SettingBool(plugin.video.stream-cinema-2-release,auto_select_stream) + System.AddonIsEnabled(plugin.video.stream-cinema-2-release) + [String.IsEqual(Container.PluginName,plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,plugin://plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,movie_library_folder)) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,tvshow_library_folder))] + Addon.SettingBool(script.contextmenu,enable_select_stream)</visible> -->
+			<!-- </item> -->
+			<!-- <item library="tool.py" args="plugin.video.stream-cinema-2-release,auto_select_stream,false" > -->
+				<!-- <label>30102</label> -->
+				<!-- <visible>Addon.SettingBool(plugin.video.stream-cinema-2-release,auto_select_stream) + System.AddonIsEnabled(plugin.video.stream-cinema-2-release) + [String.IsEqual(Container.PluginName,plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,plugin://plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,movie_library_folder)) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,tvshow_library_folder))] + Addon.SettingBool(script.contextmenu,enable_select_stream)</visible> -->
+			<!-- </item> -->
+			<!-- <item library="tool.py" args="plugin.video.stream-cinema-2-release,auto_select_stream.download,true" > -->
+				<!-- <label>30111</label> -->
+				<!-- <visible>!Addon.SettingBool(plugin.video.stream-cinema-2-release,auto_select_stream.download) + System.AddonIsEnabled(plugin.video.stream-cinema-2-release) + [String.IsEqual(Container.PluginName,plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,plugin://plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,movie_library_folder)) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,tvshow_library_folder))] + Addon.SettingBool(script.contextmenu,enable_select_stream.download)</visible> -->
+			<!-- </item> -->
+			<!-- <item library="tool.py" args="plugin.video.stream-cinema-2-release,auto_select_stream.download,false" > -->
+				<!-- <label>30112</label> -->
+				<!-- <visible>Addon.SettingBool(plugin.video.stream-cinema-2-release,auto_select_stream.download) + System.AddonIsEnabled(plugin.video.stream-cinema-2-release) + [String.IsEqual(Container.PluginName,plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,plugin://plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,movie_library_folder)) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,tvshow_library_folder))] + Addon.SettingBool(script.contextmenu,enable_select_stream.download)</visible> -->
+			<!-- </item> -->
 			<item library="command.py" args="@item1_command,5" >
 				<label>$INFO[Window(Home).Property(contextmenu_item1_name)]</label>
 				<visible>Addon.SettingBool(script.contextmenu,item1_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item1_position),5)</visible>
@@ -532,11 +730,6 @@
 				<label>$INFO[Window(Home).Property(contextmenu_item4_name)]</label>
 				<visible>Addon.SettingBool(script.contextmenu,item4_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item4_position),4)</visible>
 			</item>
-			<item library="iteminfo.py" >
-				<label>30040</label>
-				<!-- <visible>Skin.HasSetting(easy_master) + !String.IsEmpty(Container.Content) + Addon.SettingBool(script.contextmenu,enable_iteminfo)</visible> -->
-				<visible>!String.IsEmpty(Container.Content) + Addon.SettingBool(script.contextmenu,enable_iteminfo)</visible>
-			</item>
 			<item library="search.py" >
 				<label>30051</label>
 				<visible>Addon.SettingBool(script.contextmenu,common_item_search) + Addon.SettingBool(script.contextmenu,enable_search)</visible>
@@ -545,14 +738,18 @@
 				<label>30075</label>
 				<visible>System.AddonIsEnabled(plugin.video.themoviedb.helper) + Addon.SettingBool(script.contextmenu,enable_search_tmdb) + !Addon.SettingBool(script.contextmenu,common_item_search) + Addon.SettingBool(script.contextmenu,enable_search)</visible>
 			</item>
-			<item library="search.py" args="scc" >
-				<label>30058</label>
-				<visible>System.AddonIsEnabled(plugin.video.stream-cinema-2-release) + Addon.SettingBool(script.contextmenu,enable_search_scc) + !Addon.SettingBool(script.contextmenu,common_item_search) + Addon.SettingBool(script.contextmenu,enable_search)</visible>
+			<item library="search.py" args="yawsp" >
+				<label>30077</label>
+				<visible>System.AddonIsEnabled(plugin.video.yawsp) + Addon.SettingBool(script.contextmenu,enable_search_yawsp) + !Addon.SettingBool(script.contextmenu,common_item_search) + Addon.SettingBool(script.contextmenu,enable_search)</visible>
 			</item>
-			<item library="search.py" args="ws" >
-				<label>30060</label>
-				<visible>System.AddonIsEnabled(plugin.video.stream-cinema-2-release) + Addon.SettingBool(script.contextmenu,enable_search_ws) + !Addon.SettingBool(script.contextmenu,common_item_search) + Addon.SettingBool(script.contextmenu,enable_search)</visible>
-			</item>
+			<!-- <item library="search.py" args="scc" > -->
+				<!-- <label>30058</label> -->
+				<!-- <visible>System.AddonIsEnabled(plugin.video.stream-cinema-2-release) + Addon.SettingBool(script.contextmenu,enable_search_scc) + !Addon.SettingBool(script.contextmenu,common_item_search) + Addon.SettingBool(script.contextmenu,enable_search)</visible> -->
+			<!-- </item> -->
+			<!-- <item library="search.py" args="ws" > -->
+				<!-- <label>30060</label> -->
+				<!-- <visible>System.AddonIsEnabled(plugin.video.stream-cinema-2-release) + Addon.SettingBool(script.contextmenu,enable_search_ws) + !Addon.SettingBool(script.contextmenu,common_item_search) + Addon.SettingBool(script.contextmenu,enable_search)</visible> -->
+			<!-- </item> -->
 			<item library="search.py" args="sc" >
 				<label>30062</label>
 				<visible>System.AddonIsEnabled(plugin.video.stream-cinema) + Addon.SettingBool(script.contextmenu,enable_search_sc) + !Addon.SettingBool(script.contextmenu,common_item_search) + Addon.SettingBool(script.contextmenu,enable_search)</visible>
@@ -568,6 +765,33 @@
 			<item library="search.py" args="library" >
 				<label>30069</label>
 				<visible>false + System.AddonIsEnabled(script.globalsearch) + Addon.SettingBool(script.contextmenu,enable_search_library) + !Addon.SettingBool(script.contextmenu,common_item_search) + Addon.SettingBool(script.contextmenu,enable_search)</visible>
+			</item>
+			<item library="smartsearch.py" args="hellspy" >
+				<label>[COLOR blue]Smart hledání TMDb - Hellspy[/COLOR]</label>
+				<visible>Addon.SettingBool(script.contextmenu,enable_smartsearch) +
+						 System.AddonIsEnabled(plugin.video.themoviedb.helper) +
+						 System.AddonIsEnabled(plugin.video.hellspy) +
+						 String.StartsWith(ListItem.Path,plugin://plugin.video.themoviedb.helper) +
+						 !String.IsEmpty(ListItem.DBTYPE)
+				</visible>
+			</item>
+			<item library="smartsearch.py" args="sktonline" >
+				<label>[COLOR orange]Smart hledání TMDb - SKTOnline[/COLOR]</label>
+				<visible>Addon.SettingBool(script.contextmenu,enable_smartsearch) +
+						 System.AddonIsEnabled(plugin.video.themoviedb.helper) +
+						 System.AddonIsEnabled(plugin.video.sktonline) +
+						 String.StartsWith(ListItem.Path,plugin://plugin.video.themoviedb.helper) +
+						 !String.IsEmpty(ListItem.DBTYPE)
+				</visible>
+			</item>
+			<item library="smartsearch.py" args="default" >
+				<label>[COLOR green]Smart hledání TMDb - Webshare[/COLOR]</label>
+				<visible>Addon.SettingBool(script.contextmenu,enable_smartsearch) +
+						System.AddonIsEnabled(plugin.video.themoviedb.helper) +
+						System.AddonIsEnabled(plugin.video.yawsp) +
+						String.StartsWith(ListItem.Path,plugin://plugin.video.themoviedb.helper) +
+						!String.IsEmpty(ListItem.DBTYPE)
+				</visible>
 			</item>
 			<item library="command.py" args="@item1_command,3" >
 				<label>$INFO[Window(Home).Property(contextmenu_item1_name)]</label>
@@ -621,10 +845,10 @@
 				<label>30191</label>
 				<visible>String.IsEmpty(Container.PluginName) + !String.IsEmpty(ListItem.Path) + !String.IsEqual(ListItem.Path,plugin://) + !String.StartsWith(ListItem.Path,plugin://plugin.video.stream-cinema-2-release) + String.StartsWith(ListItem.Path,plugin://) + Addon.SettingBool(script.contextmenu,enable_addon_setting)</visible>
 			</item>
-			<item library="settingscc.py" >
-				<label>30191</label>
-				<visible>String.IsEmpty(Container.PluginName) + [String.StartsWith(ListItem.Path,plugin://plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,movie_library_folder)) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,tvshow_library_folder))] + Addon.SettingBool(script.contextmenu,enable_addon_setting)</visible>
-			</item>
+			<!-- <item library="settingscc.py" > -->
+				<!-- <label>30191</label> -->
+				<!-- <visible>String.IsEmpty(Container.PluginName) + [String.StartsWith(ListItem.Path,plugin://plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,movie_library_folder)) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,tvshow_library_folder))] + Addon.SettingBool(script.contextmenu,enable_addon_setting)</visible> -->
+			<!-- </item> -->
 			<item library="command.py" args="ActivateWindow(settings)" >
 				<label>30194</label>
 				<visible>Addon.SettingBool(script.contextmenu,enable_setting)</visible>
@@ -633,13 +857,17 @@
 				<label>30192</label>
 				<visible>Addon.SettingBool(script.contextmenu,enable_self_setting)</visible>
 			</item>
+			<item library="iteminfo.py" >
+				<label>30040</label>
+				<visible>!String.IsEmpty(Container.Content) + Addon.SettingBool(script.contextmenu,enable_iteminfo)</visible>
+			</item>
 			<item library=".restart.py" >
 				<label>[COLOR red]Restart pvr.hts[/COLOR]</label>
 				<visible>Skin.HasSetting(easy_master)</visible>
 			</item>
 			<item library=".dump.py" >
 				<label>[COLOR blue]Item Dump[/COLOR]</label>
-				<visible>Skin.HasSetting(easy_master)</visible>
+				<visible>true</visible>
 			</item>
 			<item library="command.py" args="@item1_command,1" >
 				<label>$INFO[Window(Home).Property(contextmenu_item1_name)]</label>
@@ -676,9 +904,8 @@
 		<website></website>
 		<email></email>
 		<source></source>
-		<news>v0.1.16 (2024-08-11)
-- added addon restart possibility
-- minor text corrections
+		<news>v0.1.20 (2025-05-01)
+- minor changes in addon.xml
 		</news>
 		<assets>
 			<icon>resources/icon.png</icon>
@@ -767,6 +994,43 @@
 	</extension>
 </addon>
 
+<addon id="script.module.blinker" name="blinker" version="1.7.0" provider-name="Jason Kirtland">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Fast, simple object-to-object and broadcast signaling</summary>
+    <description lang="en_GB">Blinker provides a fast dispatching system that allows any number of interested parties to subscribe to events, or "signals".</description>
+    <license>MIT</license>
+    <platform>all</platform>
+    <website>https://blinker.readthedocs.io/</website>
+    <source>https://github.com/pallets-eco/blinker/</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.module.infotagger" name="InfoTagger" provider-name="jurialmunkey" version="0.0.8">
+  <requires>
+    <import addon="xbmc.python" version="3.0.1"/>
+  </requires>
+  <extension point="xbmc.python.module" library="resources/modules" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en_GB">Python wrapper for setInfo on Nexus InfoTags</summary>
+    <description lang="en_GB">Python wrapper for setInfo on Nexus InfoTags</description>
+    <license>GPL-3.0-or-later</license>
+    <website>https://github.com/jurialmunkey/script.module.infotagger</website>
+    <source>https://github.com/jurialmunkey/script.module.infotagger</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+
+</addon>
+
 <addon id="script.module.selenium"
 		name="Selenium and Web Drivers"
 		version="3.12.4.006"
@@ -802,6 +1066,23 @@
       <icon>icon.png</icon>
     </assets>
   </extension>
+</addon>
+
+<addon id="script.sledovanitv" version="1.1.1" name="Script SledovaniTV" provider-name="jkmh">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.requests" />
+    </requires>
+	<extension point="xbmc.python.script" library="main.py"/>
+	<extension point="xbmc.service" library="service.py"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="cs">Script SledovaniTV</summary>
+        <summary lang="en">Script SledovaniTV</summary>
+        <description lang="cs">Script pro stažení a tvorbu playlistu a EPG pro IPTV Simple Client</description>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
 </addon>
 
 <addon id="script.sms.epg.generator" name="SMS EPG Generator" version="1.1.1" provider-name="jkmh">
@@ -883,6 +1164,27 @@ Ověřené skiny (default):[B]Confluence, Confluence SCC Omega, Estuary (Hardo) 
 	</extension>
 </addon>
 
+<addon id="script.ws.db.repair" name="WS Links Repair" version="1.0.0" provider-name="jkmh">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.18.4"/>
+        <import addon="script.module.unidecode" version="0.4.16"/>
+    </requires>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Doplněk slouží ke zjištění funkčnosti linků, které jsou v externí databázi</summary>
+		<description lang="en">Oprava linků</description>
+		<license>GNU General Public License, v2</license>
+		<language></language>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
 <addon id="script.ws.download.bandwith" version="1.0.0" name="Webshare Download Bandwith" provider-name="jkmh">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
@@ -909,6 +1211,23 @@ Ověřené skiny (default):[B]Confluence, Confluence SCC Omega, Estuary (Hardo) 
 		<platform>all</platform>
 		<license>GNU GENERAL PUBLIC LICENSE Version 2</license>
 	</extension>
+</addon>
+
+<addon id="service.birthdays.reminder" name="Narozeniny" version="1.1.1" provider-name="jkmh">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="reminder.py"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB"></summary>
+    <description lang="en_GB">Kodi Birthday Reminder</description>
+    <description lang="cs_CZ">Připomenutí narozenin vašich blízkých na domácí obrazovce.[CR][CR]Doplněk pro skin Confluence SCC. Po instalaci se rozšíří možnosti v nastavení skinu. U ostatních skinů je nutná jejich dodatečná editace.</description>
+    <license>GPL 2.0</license>
+    <platform>all</platform>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
 </addon>
 
 <addon id="service.getinfo" name="Get Info" version="0.1.0" provider-name="JiRo">
@@ -965,6 +1284,23 @@ Ověřené skiny (default):[B]Confluence, Confluence SCC Omega, Estuary (Hardo) 
 - initial version
 		</news>
 	</extension>
+</addon>
+
+<addon id="service.holidays" name="Holidays" version="1.0.6" provider-name="jkmh">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+	<import addon="script.module.requests" version="2.22.0+matrix.1"/>
+  </requires>
+  <extension point="xbmc.service" library="holidays.py"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="cs_CZ"></summary>
+    <description lang="cs_CZ">Informace o jmeninách, státních svátcích na domácí obrazovce.[CR][CR]Doplněk pro skin Confluence SCC. Po instalaci se rozšíří možnosti v nastavení skinu. U ostatních skinů je nutná jejich dodatečná editace.[CR][CR]Díky @JiRo za námět</description>
+    <license>GPL 2.0</license>
+    <platform>all</platform>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
 </addon>
 
 <addon id="service.netspeed.monitor" name="Netspeed Monitor" version="1.0.5" provider-name="jkmh">

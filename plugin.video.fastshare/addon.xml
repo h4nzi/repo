@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.fastshare" version="1.0.8" name="FASTSHARE" provider-name="info@fastshare.cz, revize jkmh">
+  <language></language>
+<requires>
+  <import addon="xbmc.python" version="3.0.0"/>
+  <!--<import addon="plugin.program.autocompletion" version="2020.0.0"/>
+  <import addon="script.module.autocompletion" version="2020.0.0"/>-->
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+  <summary lang="en_GB">FASTSHARE EN</summary>
+  <summary lang="cs_CZ">FASTSHARE CZ</summary>
+  <summary lang="pl_PL">FASTSHARE PL</summary>
+  <summary lang="sk_SK">FASTSHARE SK</summary>
+  <platform>all</platform>
+  <description lang="en_GB">Fastshare audio/video plugin for KODI.</description>
+  <disclaimer lang="en_GB">Free to use</disclaimer>
+  <description lang="cs_CZ">Fastshare audio/video rozšíření pro KODI.</description>
+  <disclaimer lang="cs_CZ">Zdarma</disclaimer>
+  <description lang="pl_PL">PL Fastshare rozszerzenie audio / wideo dla KODI.</description>
+  <disclaimer lang="pl_PL">PL za darmo</disclaimer>
+  <description lang="sk_SK">SK Fastshare audio/video rozšírenie pre KODI.</description>
+  <disclaimer lang="sk_SK">SK Zdarma</disclaimer>
+  <assets>
+    <icon>icon.png</icon>    
+  </assets>
+  <news>Verze 1.0.8 - Python 3 compatible, SK language added</news>
+</extension>
+</addon>

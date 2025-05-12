@@ -1,4 +1,4 @@
-<addon id="plugin.video.spiritual" name="Duchovní TV" version="1.0.0" provider-name="jkmh">
+<addon id="plugin.video.spiritual" name="Duchovní TV" version="1.0.1" provider-name="jkmh">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
     </requires>
