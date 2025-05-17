@@ -23,6 +23,22 @@
   </extension>
 </addon>
 
+<addon id="plugin.image.ws-private-media" name="Webshare Private Media" version="0.7.0" provider-name="Sároš">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>image audio</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="login"/>
+    <extension point="xbmc.addon.metadata">
+        <assets>
+            <icon>icon.jpg</icon>
+        </assets>
+    </extension>
+</addon>
+
 <addon id="plugin.video.archivsledovanitv" version="1.23.4" name="Archiv SledovaniTV" provider-name="Sároš, mod jkmh">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
@@ -100,7 +116,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.hellspy" name="Hellspy.cz" version="1.0.1" provider-name="jkmh">
+<addon id="plugin.video.hellspy" name="Hellspy.cz" version="1.0.2" provider-name="jkmh">
 	<requires>
 	  <import addon="xbmc.python" version="3.0.1"/>
 	  <import addon="script.module.requests"/>
@@ -182,6 +198,27 @@
             <icon>icon.png</icon>
         </assets>
     </extension>
+</addon>
+
+<addon id="plugin.video.parrotprehrajto" version="1.0.2" name="[COLOR cyan]Prehraj[/COLOR].[COLOR yellow]to[/COLOR]" provider-name="[COLOR cyan]Parrot[/COLOR] [COLOR yellow]Developers[/COLOR]">
+  <requires>
+    <import addon="script.module.requests"/>
+    <import addon="script.module.beautifulsoup4"/>
+    <import addon="script.module.parrot"/>
+    <import addon="script.module.routing"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Watch videos from https://prehaj.to</summary>
+    <description>I wanted to be able to add/remove things so i made my own version.</description>
+    <disclaimer>Not affiliated with Saros's preharj.to addon</disclaimer>
+    <license>MPL 2.0</license>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
 </addon>
 
 <addon id="plugin.video.sktonline" version="1.1.2" name="SkTonline" provider-name="cache-sk">
@@ -1164,7 +1201,7 @@ Ověřené skiny (default):[B]Confluence, Confluence SCC Omega, Estuary (Hardo) 
 	</extension>
 </addon>
 
-<addon id="script.ws.db.repair" name="WS Links Repair" version="1.0.0" provider-name="jkmh">
+<addon id="script.ws.db.repair" name="WS Links Repair" version="1.1.0" provider-name="jkmh">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.18.4"/>

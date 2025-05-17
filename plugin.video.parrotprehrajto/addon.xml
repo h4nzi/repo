@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.parrotprehrajto" version="1.0.2" name="[COLOR cyan]Prehraj[/COLOR].[COLOR yellow]to[/COLOR]" provider-name="[COLOR cyan]Parrot[/COLOR] [COLOR yellow]Developers[/COLOR]">
+  <requires>
+    <import addon="script.module.requests"/>
+    <import addon="script.module.beautifulsoup4"/>
+    <import addon="script.module.parrot"/>
+    <import addon="script.module.routing"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Watch videos from https://prehaj.to</summary>
+    <description>I wanted to be able to add/remove things so i made my own version.</description>
+    <disclaimer>Not affiliated with Saros's preharj.to addon</disclaimer>
+    <license>MPL 2.0</license>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
