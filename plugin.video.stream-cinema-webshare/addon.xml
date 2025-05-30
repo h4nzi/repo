@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.stream-cinema-webshare" name="Stream Cinema Webshare" version="1.2.0" provider-name="jkmh">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.18.4"/>
+        <import addon="script.module.unidecode" version="0.4.16"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en_GB">Stream Cinema Webshare - web storage content player</summary>
+        <summary lang="sk_SK">Stream Cinema webshare - prehrávač obsahu webového úložiska</summary>
+        <summary lang="cs_CZ">Stream Cinema Webshare - přehrávač obsahu webového úložiště</summary>
+		<description lang="cs_CZ">Stream Cinema Webshare - přehrávač obsahu webového úložiště</description>
+		<license>GNU General Public License, v2</license>
+		<language></language>
+		<assets>
+			<icon>resources/skins/images/icon.png</icon>
+			<fanart>resources/skins/images/fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>

@@ -39,29 +39,63 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.archivsledovanitv" version="1.23.4" name="Archiv SledovaniTV" provider-name="Sároš, mod jkmh">
-    <requires>
-        <import addon="xbmc.python" version="3.0.0" />
-        <import addon="script.module.requests" />
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="main.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.service" library="service.py"/>
-    <extension point="xbmc.addon.metadata">
-        <summary lang="cs">Archiv SledovaniTV</summary>
-        <summary lang="en">Archiv SledovaniTV</summary>
-        <summary lang="sk">Archív SledovanieTV</summary>
-        <description lang="cs">Až 7 dní zpětného sledování televizních pořadů ze serveru SledováníTV.cz (placená služba)</description>
-        <description lang="en">Up to 7 days of watching TV programs back from the SledovaniTV.cz server (paid service)</description>
-        <description lang="sk">Až 7 dní spätného sledovania televíznych programov zo servera SledovanieTV.sk (platená služba)</description>
-        <assets>
-            <icon>icon.png</icon>
-        </assets>
-    </extension>
+﻿<addon id="plugin.video.antik" name="Antik TV" provider-name="waladir" version="1.0.6">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.requests" version="2.18.4"/>
+    <import addon="inputstream.adaptive" version="19.0.0"/>
+    <import addon="script.module.inputstreamhelper" version="0.4.2"/>
+  </requires>
+  <extension library="main.py" point="xbmc.python.pluginsource">
+    <provides>video</provides>
+  </extension>
+  <extension library="service.py" point="xbmc.service"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Antik TV</summary>
+    <summary lang="sk_SK">Antik TV</summary>
+    <summary lang="cs_CZ">Antik TV</summary>
+    <description lang="en_GB">
+Doplněk pro Antik TV (CZ i SK)
+
+Další informace a podporu najdete na fóru www.xbmc-kodi.cz (https://www.xbmc-kodi.cz/prispevek-antik-tv--13396)
+    </description>
+    <description lang="sk_SK">
+Doplněk pro Antik TV (CZ i SK)
+
+Další informace a podporu najdete na fóru www.xbmc-kodi.cz (https://www.xbmc-kodi.cz/prispevek-antik-tv--13396)
+    </description>
+    <description lang="cs_CZ">
+Doplněk pro Antik TV (CZ i SK)
+
+Další informace a podporu najdete na fóru www.xbmc-kodi.cz (https://www.xbmc-kodi.cz/prispevek-antik-tv--13396)
+    </description>
+    <platform>all</platform>
+    <source>https://github.com/waladir/plugin.video.antik</source>
+    <news>
+v1.0.6 (27.5.2025)
+- ošetření problémových znaků v EPG
+
+v1.0.5 (22.4.2025)
+- oprava přehrávání archivu
+
+v1.0.4 (15.4.2025)
+- oprava přehrávání archivu (posun začátku)
+
+v1.0.3 (21.2.2025)
+- ošetření chybějících žánrů v datech
+
+v1.0.2 (21.2.2025)
+- přidání žánrů
+- filtrování kanálů pro archiv/catchup
+- úprava linku na fórum
+    </news>
+    <assets>
+        <icon>icon.jpg</icon>
+    </assets>
+  </extension>
 </addon>
 
-<addon id="plugin.video.fastshare" version="1.0.8" name="FASTSHARE" provider-name="info@fastshare.cz, revize jkmh">
+<addon id="plugin.video.fastshare" version="2.0.0" name="FASTSHARE" provider-name="info@fastshare.cz, revize jkmh">
   <language></language>
 <requires>
   <import addon="xbmc.python" version="3.0.0"/>
@@ -116,11 +150,10 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.hellspy" name="Hellspy.cz" version="1.0.2" provider-name="jkmh">
+<addon id="plugin.video.hellspy" name="Hellspy.cz" version="1.1.2" provider-name="jkmh, VincoNafta">
 	<requires>
 	  <import addon="xbmc.python" version="3.0.1"/>
 	  <import addon="script.module.requests"/>
-	  <import addon="script.module.urllib3" version="1.26.9"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
 	  <provides>video</provides>
@@ -130,29 +163,6 @@
         <description lang="cs">Hledej a přehrávej videa z Hellspy.cz Není nutný účet.[CR][CR]Tímto díky @JanoHD za nápad.</description>
         <platform>all</platform>
     	<assets>
-			<icon>icon.png</icon>
-		</assets>
-	</extension>
-</addon>
-
-<addon id="plugin.video.idnes" name="TV iDnes" version="1.1.2" provider-name="jkmh">
-	<requires>
-		<import addon="xbmc.python" version="3.0.0"/>
-		<import addon="script.module.selenium"/>
-		<import addon="script.module.requests"/>
-		<import addon="script.module.beautifulsoup4"/>
-		<import addon="script.module.routing"/>
-		<import addon="script.module.urllib3"/>
-		<import addon="script.module.pil"/>
-	</requires>
-	<extension library="default.py" point="xbmc.python.pluginsource">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="cs_CZ">iDnes.cz</summary>
-		<description lang="cs_CZ">Doplněk umožňuje sledování streamů z webu tv.idnes.cz.</description>
-		<platform>all</platform>
-		<assets>
 			<icon>icon.png</icon>
 		</assets>
 	</extension>
@@ -182,43 +192,30 @@
 	</extension>
 </addon>
 
-<addon id="plugin.video.noe" name="Noe TV" version="1.0.1" provider-name="jkmh">
-    <requires>
-        <import addon="xbmc.python" version="3.0.0"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-	<extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">TV Noe and Noe+</summary>
-        <summary lang="cs_CZ">TV Noe a Noe+</summary>
-        <description lang="cs_CZ">Jednoduchý doplněk pro sledování TV Noe a TV Noe+</description>
-        <platform>all</platform>
-        <assets>
-            <icon>icon.png</icon>
-        </assets>
-    </extension>
-</addon>
-
-<addon id="plugin.video.parrotprehrajto" version="1.0.2" name="[COLOR cyan]Prehraj[/COLOR].[COLOR yellow]to[/COLOR]" provider-name="[COLOR cyan]Parrot[/COLOR] [COLOR yellow]Developers[/COLOR]">
-  <requires>
-    <import addon="script.module.requests"/>
-    <import addon="script.module.beautifulsoup4"/>
-    <import addon="script.module.parrot"/>
-    <import addon="script.module.routing"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Watch videos from https://prehaj.to</summary>
-    <description>I wanted to be able to add/remove things so i made my own version.</description>
-    <disclaimer>Not affiliated with Saros's preharj.to addon</disclaimer>
-    <license>MPL 2.0</license>
-    <assets>
-      <icon>icon.png</icon>
-    </assets>
-  </extension>
+<addon id="plugin.video.nahnoji.cz"
+version="1.0.1"
+name="Nahnoji.cz"
+provider-name="VincoNafta">
+<requires>
+  <import addon="xbmc.python" version="3.0.1"/>
+  <import addon="script.module.beautifulsoup4" version="4.6.2"/>
+  <import addon="script.module.requests"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+  <summary>Nahnoji Vyhladavač</summary>
+  <description>Vyladavač videii zo servera nahnoji.cz.</description>
+  <disclaimer>Nie som zodpovedný za obsah doplnku</disclaimer>
+  <license>GPL-3.0-only	</license>
+  <assets>
+    <icon>resources/images/icon.png</icon>
+    <fanart>resources/images/fanart.jpg</fanart>
+    <screenshot>resources/images/screenshot-1.jpg</screenshot>
+    <screenshot>resources/images/screenshot-2.jpg</screenshot>
+  </assets>
+</extension>
 </addon>
 
 <addon id="plugin.video.sktonline" version="1.1.2" name="SkTonline" provider-name="cache-sk">
@@ -266,50 +263,46 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.spiritual" name="Duchovní TV" version="1.0.1" provider-name="jkmh">
+<addon id="plugin.video.stream-cinema-webshare" name="Stream Cinema Webshare" version="1.2.0" provider-name="jkmh">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.18.4"/>
+        <import addon="script.module.unidecode" version="0.4.16"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en_GB">Stream Cinema Webshare - web storage content player</summary>
+        <summary lang="sk_SK">Stream Cinema webshare - prehrávač obsahu webového úložiska</summary>
+        <summary lang="cs_CZ">Stream Cinema Webshare - přehrávač obsahu webového úložiště</summary>
+		<description lang="cs_CZ">Stream Cinema Webshare - přehrávač obsahu webového úložiště</description>
+		<license>GNU General Public License, v2</license>
+		<language></language>
+		<assets>
+			<icon>resources/skins/images/icon.png</icon>
+			<fanart>resources/skins/images/fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="plugin.video.webshare" name="Webshare video" version="1.1.0" provider-name="jkmh">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.requests" version="2.21.0" />
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>video</provides>
     </extension>
-	<extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">TV Noe, Noe+, TV Lux</summary>
-        <summary lang="cs_CZ">TV Noe, Noe+ a TV Lux</summary>
-        <description lang="cs_CZ">Jednoduchý doplněk pro sledování TV Noe, TV Noe+ a TV Lux</description>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="cs">Vyhledávání videí na serveru Webshare</summary>
+        <description lang="cs">Hledej a přehrávej videa z Webshare.cz jinak</description>
         <platform>all</platform>
-        <assets>
-            <icon>icon.png</icon>
-        </assets>
-    </extension>
-</addon>
-
-<addon id="plugin.video.tvlux.sk"
-version="1.4.1"
-name="Televízia LUX"
-provider-name="VincoNafta">
-<requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="script.module.beautifulsoup4" version="4.6.2"/>
-    <import addon="script.module.urllib3" version="1.26.9"/>
-    <import addon="script.module.dateutil" version="2.8.1"/>
-</requires>
-<extension point="xbmc.python.pluginsource" library="main.py">
-  <provides>video</provides>
-</extension>
-<extension point="xbmc.addon.metadata">
-  <summary lang="en">Archive tv lux</summary>
-  <summary lang="sk">Archív televízie lux</summary>
-  <description lang="sk_SK">Sledujte relácie z TV LUX už piamo v kodi</description>
-  <disclaimer lang="sk_SK">Všetky videá su k dispozicii z webovej stránky
-  doplnok je len simuláciou prehliadača
-  </disclaimer>
-  <disclaimer lang="en_GB">All videos are free from oficial website
-    Addon is only webbrowser simulation</disclaimer>
-  <assets>
-    <icon>icon.png</icon>
-  </assets>
-</extension>
+    	<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
 </addon>
 
 <addon id="plugin.video.yawsp" name="YAWsP" version="0.2.0" provider-name="cache-sk">
@@ -580,50 +573,6 @@ provider-name="VincoNafta">
 		<disclaimer lang="vi_VN">Đội ngũ Kodi không làm ra tất cả các add-on có trên kho chứa này và sẽ không chịu trách nhiệm về nội dung của các add-on đấy</disclaimer>
 		<disclaimer lang="zh_CN">此插件库中插件并不完全由 Kodi 团队制作，对相关内容不承担责任</disclaimer>
 		<disclaimer lang="zh_TW">這個附加元件庫的附加元件並非全部由 Kodi 團隊製作的，所以我們不對這些內容負責。</disclaimer>
-	</extension>
-</addon>
-
-<addon id="repository.h4nzi" name="JKMH Repository" version="1.0.8" provider-name="jkmh">
-	<extension point="xbmc.addon.repository" name="h4nzi">
-		<dir minversion="17.9.0">
-			<info compressed="false">https://raw.githubusercontent.com/h4nzi/repo/master/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/h4nzi/repo/master/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/h4nzi/repo/master/</datadir>
-		</dir>
-		<dir minversion="18.9.0">
-			<info compressed="false">https://raw.githubusercontent.com/h4nzi/repo/addons/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/h4nzi/repo/addons/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/h4nzi/repo/addons/</datadir>
-		</dir>
-		<dir minversion="20.9.0">
-			<info compressed="false">https://raw.githubusercontent.com/h4nzi/repo/omega/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/h4nzi/repo/omega/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/h4nzi/repo/omega/</datadir>
-		</dir>
-		<dir minversion="19.9.0">
-			<info compressed="false">https://raw.githubusercontent.com/h4nzi/repo/nexus/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/h4nzi/repo/nexus/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/h4nzi/repo/nexus/</datadir>
-		</dir>
-		<dir minversion="18.9.0">
-			<info compressed="false">https://raw.githubusercontent.com/h4nzi/repo/matrix/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/h4nzi/repo/matrix/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/h4nzi/repo/matrix/</datadir>
-		</dir>
-		<dir minversion="17.9.0">
-			<info compressed="false">https://raw.githubusercontent.com/h4nzi/repo/leia/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/h4nzi/repo/leia/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/h4nzi/repo/leia/</datadir>
-		</dir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>Moje repo</summary>
-		<description>Download and install addons by jkmh.</description>
-		<platform>all</platform>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-		</assets>
 	</extension>
 </addon>
 
@@ -1013,80 +962,6 @@ provider-name="VincoNafta">
 	</extension>
 </addon>
 
-<addon id="script.mediainfo" name="Media Info" version="0.0.1" provider-name="jkmh">
-	<requires>
-		<import addon="xbmc.python" version="3.0.0"/>
-		<import addon="xbmc.addon" version="14.0.0"/>
-		<import addon="virtual.multimedia-tools" version="20.2.1"/>
-	</requires>
-	<extension point="xbmc.python.script" library="mediainfo.py" />
-	<extension point="xbmc.addon.metadata">
-		<summary lang="cs_CZ">Media Info</summary>
-		<description lang="cs_CZ">Detailní informace o streamu</description>
-		<platform>all</platform>
-		<license>GPL 2.0</license>
-		<assets>
-			<icon>icon.png</icon>
-		</assets>
-	</extension>
-</addon>
-
-<addon id="script.module.blinker" name="blinker" version="1.7.0" provider-name="Jason Kirtland">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0" />
-  </requires>
-  <extension point="xbmc.python.module" library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Fast, simple object-to-object and broadcast signaling</summary>
-    <description lang="en_GB">Blinker provides a fast dispatching system that allows any number of interested parties to subscribe to events, or "signals".</description>
-    <license>MIT</license>
-    <platform>all</platform>
-    <website>https://blinker.readthedocs.io/</website>
-    <source>https://github.com/pallets-eco/blinker/</source>
-    <assets>
-      <icon>resources/icon.png</icon>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="script.module.infotagger" name="InfoTagger" provider-name="jurialmunkey" version="0.0.8">
-  <requires>
-    <import addon="xbmc.python" version="3.0.1"/>
-  </requires>
-  <extension point="xbmc.python.module" library="resources/modules" />
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <summary lang="en_GB">Python wrapper for setInfo on Nexus InfoTags</summary>
-    <description lang="en_GB">Python wrapper for setInfo on Nexus InfoTags</description>
-    <license>GPL-3.0-or-later</license>
-    <website>https://github.com/jurialmunkey/script.module.infotagger</website>
-    <source>https://github.com/jurialmunkey/script.module.infotagger</source>
-    <assets>
-      <icon>icon.png</icon>
-    </assets>
-  </extension>
-
-</addon>
-
-<addon id="script.module.selenium"
-		name="Selenium and Web Drivers"
-		version="3.12.4.006"
-		provider-name="YDRAGON">
-	<requires>
-		<import addon="xbmc.python" version="3.0.0" />
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<platform>all</platform>
-		<summary>Selenium automates browsers.</summary>
-		<description>Selenium has the support of some of the largest browser vendors who have taken (or are taking) steps to make Selenium a native part of their browser. It is also the core technology in countless other browser automation tools, APIs and frameworks.</description>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-        <platform>all</platform>
-        <email>nkvoronov@gmail.com</email>
-		<source>https://github.com/nkvoronov/script.module.selenium.git</source>
-	</extension>
-</addon>
-
 <addon id="script.skip.ads" name="Skip Ads" version="1.0.1" provider-name="jkmh">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -1201,27 +1076,6 @@ Ověřené skiny (default):[B]Confluence, Confluence SCC Omega, Estuary (Hardo) 
 	</extension>
 </addon>
 
-<addon id="script.ws.db.repair" name="WS Links Repair" version="1.1.0" provider-name="jkmh">
-	<requires>
-		<import addon="xbmc.python" version="3.0.0"/>
-        <import addon="script.module.requests" version="2.18.4"/>
-        <import addon="script.module.unidecode" version="0.4.16"/>
-    </requires>
-	<extension point="xbmc.python.script" library="main.py">
-		<provides>executable</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<platform>all</platform>
-		<summary lang="en">Doplněk slouží ke zjištění funkčnosti linků, které jsou v externí databázi</summary>
-		<description lang="en">Oprava linků</description>
-		<license>GNU General Public License, v2</license>
-		<language></language>
-		<assets>
-			<icon>icon.png</icon>
-		</assets>
-	</extension>
-</addon>
-
 <addon id="script.ws.download.bandwith" version="1.0.0" name="Webshare Download Bandwith" provider-name="jkmh">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
@@ -1250,96 +1104,6 @@ Ověřené skiny (default):[B]Confluence, Confluence SCC Omega, Estuary (Hardo) 
 	</extension>
 </addon>
 
-<addon id="service.birthdays.reminder" name="Narozeniny" version="1.1.1" provider-name="jkmh">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-  </requires>
-  <extension point="xbmc.service" library="reminder.py"/>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB"></summary>
-    <description lang="en_GB">Kodi Birthday Reminder</description>
-    <description lang="cs_CZ">Připomenutí narozenin vašich blízkých na domácí obrazovce.[CR][CR]Doplněk pro skin Confluence SCC. Po instalaci se rozšíří možnosti v nastavení skinu. U ostatních skinů je nutná jejich dodatečná editace.</description>
-    <license>GPL 2.0</license>
-    <platform>all</platform>
-    <assets>
-      <icon>icon.png</icon>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="service.getinfo" name="Get Info" version="0.1.0" provider-name="JiRo">
-	<requires>
-		<import addon="xbmc.python" version="3.0.0"/>
-	</requires>
-	<extension point="xbmc.service" library="service.py">
-		<provides>service</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="cs_CZ">Get Stream Info</summary>
-		<description lang="cs_CZ">Service uloží do specfifických properties ve window=10000 (HOME) informace o adrese přehrávaného streamu.[CR]Současná verze ukládá:[CR]Adresu přehrávaného streamu do property 'played_stream'[CR]Parsovaný název serveru do property 'downloaded_server'.
-</description>
-        <language>cs</language>
-		<platform>all</platform>
-        <license>GPL 2.0</license>
-		<forum></forum>
-		<website></website>
-		<email></email>
-		<source></source>
-		<assets>
-			<icon></icon>
-		</assets>
-		<news>
-2024-01-10 [0.1.0]
-- initial version
-		</news>
-	</extension>
-</addon>
-
-<addon id="service.getstreaminfo" name="Get Stream Info" version="0.1.0" provider-name="JiRo">
-	<requires>
-		<import addon="xbmc.python" version="3.0.0"/>
-	</requires>
-	<extension point="xbmc.service" library="service.py">
-		<provides>service</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="cs_CZ">Get Stream Info</summary>
-		<description lang="cs_CZ">Service uloží do specfifických properties ve window=10000 (HOME) informace o adrese přehrávaného streamu.[CR]Současná verze ukládá:[CR]Adresu přehrávaného streamu do property 'played_stream'[CR]Parsovaný název serveru do property 'downloaded_server'.
-</description>
-        <language>cs</language>
-		<platform>all</platform>
-        <license>GPL 2.0</license>
-		<forum></forum>
-		<website></website>
-		<email></email>
-		<source></source>
-		<assets>
-			<icon></icon>
-		</assets>
-		<news>
-2024-01-10 [0.1.0]
-- initial version
-		</news>
-	</extension>
-</addon>
-
-<addon id="service.holidays" name="Holidays" version="1.0.6" provider-name="jkmh">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-	<import addon="script.module.requests" version="2.22.0+matrix.1"/>
-  </requires>
-  <extension point="xbmc.service" library="holidays.py"/>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="cs_CZ"></summary>
-    <description lang="cs_CZ">Informace o jmeninách, státních svátcích na domácí obrazovce.[CR][CR]Doplněk pro skin Confluence SCC. Po instalaci se rozšíří možnosti v nastavení skinu. U ostatních skinů je nutná jejich dodatečná editace.[CR][CR]Díky @JiRo za námět</description>
-    <license>GPL 2.0</license>
-    <platform>all</platform>
-    <assets>
-      <icon>icon.png</icon>
-    </assets>
-  </extension>
-</addon>
-
 <addon id="service.netspeed.monitor" name="Netspeed Monitor" version="1.0.5" provider-name="jkmh">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -1366,25 +1130,6 @@ Ověřené skiny (default):[B]Confluence, Confluence SCC Omega, Estuary (Hardo) 
   <extension point="xbmc.addon.metadata">
     <summary lang="cs_CZ">Monitoring dostupnosti sítě a internetu</summary>
     <description lang="cs_CZ">Kontinuální zjišťování dostupnosti internetu ikonami na hlavní obrazovce.[CR][CR]Doplněk pro skin Confluence SCC. Po instalaci se rozšíří možnosti v nastavení skinu. U ostatních skinů je nutná jejich dodatečná editace.</description>
-    <license>GPL 2.0</license>
-    <platform>all</platform>
-    <assets>
-      <icon>icon.png</icon>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="service.scc.availability" name="SCC Status Availability" version="1.0.0" provider-name="jkmh">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-	<import addon="script.module.requests" version="2.27.1+matrix.1"/>
-	<import addon="xbmc.addon" version="14.0.0"/>
-  </requires>
-  <extension point="xbmc.service" library="status.py"/>
-  <extension point="xbmc.python.module" library="resources/libs/"/>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">SCC Status Availability</summary>
-    <description lang="cs_CZ">Služba pro nepřetržitou kontrolu dostupnosti SCC pro skin Confluence SCC. Po nainstalování se automaticky rozšíří možnosti nastavení. K zobrazení informací v jiných skinech je nutná jejich dodatečná editace. </description>
     <license>GPL 2.0</license>
     <platform>all</platform>
     <assets>
