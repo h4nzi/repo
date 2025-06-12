@@ -1,0 +1,13 @@
+<addon id="plugin.program.mediainfo" version="1.0.0" name="MediaInfo+" provider-name="TvujNick">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.script" library="default.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Show stream MediaInfo including HDR type</summary>
+        <description>Displays technical info about current video including HDR (HDR10, HDR10+, Dolby Vision)</description>
+        <platform>all</platform>
+    </extension>
+</addon>

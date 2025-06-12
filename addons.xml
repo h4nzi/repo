@@ -39,6 +39,20 @@
     </extension>
 </addon>
 
+<addon id="plugin.program.mediainfo" version="1.0.0" name="MediaInfo+" provider-name="TvujNick">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.script" library="default.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Show stream MediaInfo including HDR type</summary>
+        <description>Displays technical info about current video including HDR (HDR10, HDR10+, Dolby Vision)</description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
 ﻿<addon id="plugin.video.antik" name="Antik TV" provider-name="waladir" version="1.0.6">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -93,6 +107,28 @@ v1.0.2 (21.2.2025)
         <icon>icon.jpg</icon>
     </assets>
   </extension>
+</addon>
+
+<addon id="plugin.video.archivsledovanitv" version="1.23.4" name="Archiv SledovaniTV" provider-name="Sároš, mod jkmh">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.requests" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="cs">Archiv SledovaniTV</summary>
+        <summary lang="en">Archiv SledovaniTV</summary>
+        <summary lang="sk">Archív SledovanieTV</summary>
+        <description lang="cs">Až 7 dní zpětného sledování televizních pořadů ze serveru SledováníTV.cz (placená služba)</description>
+        <description lang="en">Up to 7 days of watching TV programs back from the SledovaniTV.cz server (paid service)</description>
+        <description lang="sk">Až 7 dní spätného sledovania televíznych programov zo servera SledovanieTV.sk (platená služba)</description>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
 </addon>
 
 <addon id="plugin.video.fastshare" version="2.0.0" name="FASTSHARE" provider-name="info@fastshare.cz, revize jkmh">
@@ -263,7 +299,7 @@ provider-name="VincoNafta">
     </extension>
 </addon>
 
-<addon id="plugin.video.stream-cinema-webshare" name="Stream Cinema Webshare" version="2.1.2" provider-name="jkmh">
+<addon id="plugin.video.stream-cinema-webshare" name="Stream Cinema Webshare" version="2.1.4.1" provider-name="jkmh">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.18.4"/>
@@ -301,6 +337,28 @@ provider-name="VincoNafta">
         <platform>all</platform>
     	<assets>
 			<icon>icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="plugin.video.ws" name="Webshare Player" version="1.1.0" provider-name="jkmh">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.18.4"/>
+        <import addon="script.module.unidecode" version="0.4.16"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Doplněk slouží ke zjištění funkčnosti linků, které jsou v externí databázi</summary>
+		<description lang="en">Oprava linků</description>
+		<license>GNU General Public License, v2</license>
+		<language></language>
+		<assets>
+			<icon>resources/skins/images/icon.jpg</icon>
+			<fanart>resources/skins/images/fanart.jpg</fanart>
 		</assets>
 	</extension>
 </addon>
@@ -958,6 +1016,24 @@ provider-name="VincoNafta">
 		<language>cz</language>
 		<assets>
 			<icon>kitchen.png</icon>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="script.mediainfo" name="Media Info" version="0.0.1" provider-name="jkmh">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="xbmc.addon" version="14.0.0"/>
+		<import addon="virtual.multimedia-tools" version="20.2.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="mediainfo.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="cs_CZ">Media Info</summary>
+		<description lang="cs_CZ">Detailní informace o streamu</description>
+		<platform>all</platform>
+		<license>GPL 2.0</license>
+		<assets>
+			<icon>icon.png</icon>
 		</assets>
 	</extension>
 </addon>
