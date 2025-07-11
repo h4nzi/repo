@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.image.kindgirls"
+	name="Kindgirls"
+	version="0.2.1-alpha"
+	provider-name="DaM">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.beautifulsoup4" version="4.6.3"/>
+		<import addon="script.module.requests" version="2.22.0"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" 
+		   library="default.py">
+	<provides>image video</provides>
+	</extension>
+	<extension point="xbmc.python.module" 
+		   library="resources/lib"/>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">View photos and videos from http://www.kindgirls.com</summary>
+		<description lang="en">Kindgirls: Nude girls in erotic photos and videos</description> 
+		<license>GPL 2.0</license>
+		<language>en</language>
+		<forum>https://github.com/d4m/plugin.image.kindgirls/issues</forum>
+		<website>https://github.com/d4m/plugin.image.kindgirls</website>
+		<source>https://github.com/d4m/plugin.image.kindgirls</source>
+		<email>kontakt@dpisarczyk.pl</email>
+	</extension>
+</addon>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.streambox" name="StreamBox" version="0.2.1" provider-name="cache.sk a Johnysko">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.18.4"/>
+        <import addon="script.module.unidecode" version="0.4.16"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>StreamBox</summary>
+        <disclaimer lang="en_GB">This add-on does not host or upload any content. The developer of this add-on is not responsible for any content displayed through it.
+        The add-on is intended solely for searching and displaying publicly available content from external sources. Use of this add-on is at the user’s own risk.</disclaimer>
+        <disclaimer lang="sk_SK">Tento doplnok neslúži na hosťovanie ani nahrávanie žiadneho obsahu. Autor doplnku nezodpovedá za obsah zobrazovaný prostredníctvom tohto doplnku.
+        Doplnok slúži výhradne na vyhľadávanie a zobrazovanie verejne dostupného obsahu z externých úložísk. Používanie doplnku je na vlastnú zodpovednosť používateľa.</disclaimer>
+        <disclaimer lang="cs_CZ">Tento doplněk neslouží k hostování ani nahrávání žádného obsahu. Autor doplňku nezodpovídá za obsah zobrazený prostřednictvím tohoto doplňku. 
+        Doplněk pouze umožňuje vyhledávání a zobrazování veřejně dostupného obsahu z externích úložišť. Používání doplňku je na vlastní zodpovědnost uživatele.</disclaimer>
+        <platform>all</platform>
+        <license>AGPL 3.0</license>
+        <forum>top secret</forum>
+        <source>top secret</source>
+        <assets>
+            <icon>resources/icon.png</icon>            
+        </assets>
+        <news>
+[B]0.2.1[/B]
+- Možnost přidávat si vlastní seznamy filmů z TMDB
+- Přidáno tlačítko na návrat do příslušného menu v listování seznamů
+[B]0.2.0[/B]
+- Přidáno kompletní napojení na TMDB(filmy a seriály)
+- Nová sada ikon
+- Seznamy pro filmy a seriály(populární, trendy atp.)
+- Možnost vyhledávání a řazení dle názvu, žánru a roku vydání
+- Filmové tématické seznamy(Vánoce, léto, české filmy atp.)
+- Možnost hledat filmové kolekce a různé filmové série (Star Wars, Spider-man, Marvel atp.)
+- Zobrazuje nejpopulárnější seriály v rámci TOP 5 VOD služeb v ČR
+[B]0.1.4[/B]
+- Přidána knihovna Fuzzy Wuzzy pro vylepšení vyhledávání a zobrazování pouze relevantních výsledků + ukládá log s výsledky
+- Přidána možnost do nastavení pro ruční zadání hodnoty pro minimální shodu hledané fráze (0-100, 0=vše, 100=nejpřesnější)
+- Nová sada ikon v hlavním menu
+- Malé kosmetické úpravy(zobrazování velikosti souborů v MB a pořadí položek v menu hledání)
+[B]0.1.3[/B]
+- Možnost řadit soubory podle rozlišení (4K > 1080p > 720p)
+- Zobrazování SK u slovensky dabovaných filmů a zobrazení tagu SK + společný tag s CZ
+- Možnost filtrování max a min. velikosti souborů dle ručně zadaných velikostí (fungují jakékoliv hodnoty MB i GB)
+[B]0.1.2[/B]
+- Možnost filtrovat soubory dle velikosti (menší než 1,5GB a 700MB)   
+[B]0.1.1[/B]
+- Normalizace názvů očištěných od speciálních znaků(tečky, čárky, pomlčky atd.)
+- Možnost skrýt soubory u kterých nelze získat metadata      
+[B]0.1.0[/B]
+- Vylepšené vyhledávání dle nových pravidel
+- Možnost filtrování filmů dle kvality a HDR (4K, 1080p, 720p)
+- Zobrazování CZ u česky dabovaných filmů a možnost jejich zobrazení
+- Defaultně je řazení nově od největšího souboru
+- Nedávno hledané položky se ukládají do nové složky "Nedávno hledané"
+        </news>
+    </extension>
+</addon>
