@@ -1,28 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.image.kindgirls"
-	name="Kindgirls"
-	version="0.2.1-alpha"
-	provider-name="DaM">
+<addon id="plugin.image.kindgirls"	name="Kindgirls" version="1.0.0" provider-name="JiRo, DaM, credit Lunatixz">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
-		<import addon="script.module.beautifulsoup4" version="4.6.3"/>
-		<import addon="script.module.requests" version="2.22.0"/>
+		<import addon="script.module.beautifulsoup4" version="4.9.3+matrix.1"/>
+		<import addon="script.module.requests" version="2.3.0"/>
 	</requires>
-	<extension point="xbmc.python.pluginsource" 
-		   library="default.py">
-	<provides>image video</provides>
+	<extension point="xbmc.python.pluginsource" library="plugin.py">
+		<provides>image</provides>
 	</extension>
-	<extension point="xbmc.python.module" 
-		   library="resources/lib"/>
-	<extension point="xbmc.addon.metadata">
+	<extension point="xbmc.python.module" library="resources/lib/"/>
+ 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
-		<summary lang="en">View photos and videos from http://www.kindgirls.com</summary>
-		<description lang="en">Kindgirls: Nude girls in erotic photos and videos</description> 
+		<summary lang="en_GB">View photos and videos from http://www.kindgirls.com</summary>
+		<description lang="en_GB">Kindgirls are Nude girls in erotic photos and videos</description>
+		<disclaimer lang="en_GB">This is an experimental mod and may not match the original addon from the original author by its version numbering. You use this addon only at your own risk.</disclaimer>
 		<license>GPL 2.0</license>
-		<language>en</language>
-		<forum>https://github.com/d4m/plugin.image.kindgirls/issues</forum>
-		<website>https://github.com/d4m/plugin.image.kindgirls</website>
-		<source>https://github.com/d4m/plugin.image.kindgirls</source>
-		<email>kontakt@dpisarczyk.pl</email>
+		<language>en_GB</language>
+		<forum></forum>
+		<website></website>
+		<source></source>
+		<email></email>
+		<assets>
+            <icon>resources/media/icon.png</icon>
+            <fanart>resources/media/fanart.jpg</fanart>
+            <clearlogo>resources/media/clearlogo.png</clearlogo>
+            <screenshot>resources/media/screenshot1.jpg</screenshot>
+            <screenshot>resources/media/screenshot2.jpg</screenshot>
+            <screenshot>resources/media/screenshot3.jpg</screenshot>
+		</assets>
+		<news>v1.0.0 (2025-06-10)
+- Adaptation to the new version of the website
+- Module plugin divided into modules plugin and views
+- Added plugin category(title of page)
+- Some new views
+		</news>
 	</extension>
 </addon>

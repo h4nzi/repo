@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.macro" name="Command Macro" version="0.2.0" provider-name="JiRo">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+	</requires>
+	<extension point="xbmc.python.script" library="script.py">
+		<provides>executable</provides>
+	</extension>
+    <extension point="xbmc.python.module" library="resources/lib/"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="cs_CZ">Doplněk vykoná příkazy definované v parametrech jeho spuštění.</summary>
+		<description lang="cs_CZ">Doplněk je momentálně v testovací verzi.</description>
+        <disclaimer  lang="cs_CZ">Tato verze doplňku je experimentální.[CR]Její použití v produktivních prostředích Kodi jen na vlastní nebezpečí!</disclaimer>
+		<summary lang="sk_SK">Doplnok vykoná príkazy definované v parametroch jeho spustenia.</summary> 
+		<description lang="sk_SK">Doplnok je momentálne v testovacej verzii.</description> 
+		<disclaimer lang="sk_SK">Táto verzia doplnku je experimentálna.[CR]Jej použitie v produktívnych prostrediach Kodi len na vlastné nebezpečenstvo!</disclaimer>
+		<summary lang="en_GB">The add-on executes the commands defined in its launch parameters.</summary>
+		<description lang="en_GB">The add-on is currently in a test version.</description>
+		<disclaimer lang="en_GB">This version of the add-on is experimental.[CR]Use it in production Kodi environments at your own risk!</disclaimer>
+		<language>cs_CZ</language>
+		<platform>all</platform>
+        <license>GPL 2.0 or later</license>
+		<forum></forum>
+		<website></website>
+		<email></email>
+		<source></source>
+		<assets>
+			<icon>resource/icon.png</icon>
+            <screenshot></screenshot>
+		</assets>
+		<news>v0.2.0 (2025-07-16)
+- minor bug fixes
+- add @StopAndDelay internal functions
+		</news>
+	</extension>
+</addon>

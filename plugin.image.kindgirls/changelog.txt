@@ -1,6 +1,48 @@
-0.2 - by DaM 06/02/2015
+v0.3.8 - 2024-03-25
+- Adaptation to the new version of the website
+- Module plugin divided into modules plugin and views
+- Added plugin category(title of page)
+- Some new views
+
+v0.3.7 - 2022-07-06
+- Partial code cleaning and standardizing
+
+v0.3.6 - 2022-12-02
+- Rename video by pages (videobypages)
+- Add one video gallery (video)
+
+v0.3.5 - 2022-11-20
+- Add video gallery by pages
+- Add video pages
+- Add random video
+
+v0.3.4 - 2022-06-19
+- Delete screensaver entry points
+- Screensaver continue as standalone solution with original addon id
+- Rotation menu (like screensaver) as classs/module (not entry points)
+
+v0.3.3 - 2022-06-19
+- Add new addon entry points for ScreenSaver (rotation)
+  - as executable script
+  - main menu item
+
+v0.3.2 - 2022-05-05
+- Matrix version
+- Change addon id  -> "plugin.image.kindgirls2" and name -> "Kindgirls with ScreenSaver"
+- New script concept finalized 
+
+v0.3.1 - 2022-03-05
+- Add screensaver (used Unsplash addon's code by Lunatixz)
+
+v0.3.0 - 2022-02-01
+- Creating new fork by JiRo
+- Add more views of galleries
+- Add random gallery
+- Add support for widgets
+
+v0.2 - by DaM 06/02/2015
 - Add more galleries link
 - Add video gallery
 
-0.1 - by DaM 06/01/2015
+v0.1 - by DaM 06/01/2015
 - Initial version
